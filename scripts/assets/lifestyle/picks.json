@@ -1,0 +1,675 @@
+{
+ "images": [
+  {
+   "bucket": "billboards",
+   "name": "bb-serum",
+   "key": "serum",
+   "cand": "fh-all#5",
+   "focus": [
+    0.55,
+    0.42
+   ],
+   "alt": "Hand releasing a drop of golden serum from a glass dropper into an amber bottle beside fresh rosemary"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-hair",
+   "key": "hair",
+   "cand": "sx-hair2#29",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "alt": "Long glossy auburn hair blowing in warm golden-hour light, seen from behind"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-makeup",
+   "key": "makeup",
+   "cand": "sx-makeup#1",
+   "focus": [
+    0.26,
+    0.68
+   ],
+   "alt": "Make-up brushes, a lipstick and pencils laid out on a white dressing table",
+   "zoom": 1.85,
+   "retouch": [
+    {
+     "box": [
+      0.6,
+      0.37,
+      0.69,
+      0.54
+     ],
+     "mode": "max",
+     "size": 11
+    },
+    {
+     "box": [
+      0.5,
+      0.6,
+      0.63,
+      0.75
+     ],
+     "mode": "max",
+     "size": 11
+    }
+   ]
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-herbal",
+   "key": "herbal",
+   "cand": "sx-herb#0",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "flip": true,
+   "alt": "Hand holding a bunch of fresh green herbs against a soft green meadow"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-men",
+   "key": "men",
+   "cand": "sx-barber#0",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "alt": "Barber shaping a man's hair with a comb and clippers in a warm-toned barbershop",
+   "retouch": [
+    {
+     "box": [
+      0.41,
+      0.49,
+      0.545,
+      0.615
+     ],
+     "mode": "min",
+     "size": 13
+    }
+   ]
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-fragrance",
+   "key": "fragrance",
+   "cand": "wc-perf2#3",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "alt": "Square perfume bottle beaded with water droplets in deep red light"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-bath",
+   "key": "bath",
+   "cand": "px-spa#0",
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "alt": "Bar of handmade soap with a rose on a glass dish over soft pink towels"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-sunscreen",
+   "key": "sunscreen",
+   "cand": "sx-sun#1",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "alt": "Straw parasols and sun loungers on a bright beach by the sea"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-minimal",
+   "key": "minimal",
+   "cand": "sx-cream#21",
+   "focus": [
+    0.64,
+    0.8
+   ],
+   "alt": "Hands opening a jar of blue gel cream on a white marble counter",
+   "zoom": 1.25
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-ayurveda",
+   "key": "ayurveda",
+   "cand": "fh-all#21",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Wooden spoons of turmeric, fenugreek, ashwagandha and boswellia on a dark wooden table"
+  },
+  {
+   "bucket": "billboards",
+   "name": "bb-gifts",
+   "key": "gifts",
+   "cand": "sx-gift#0",
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "alt": "Gift box wrapped in white paper with a red satin ribbon and bow"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-sensitive",
+   "key": "sensitive",
+   "cand": "sx-cosmetic#8",
+   "focus": [
+    0.55,
+    0.55
+   ],
+   "zoom": 1.3,
+   "alt": "Hands opening a jar of gentle moisturiser in a bright bathroom",
+   "retouch": [
+    {
+     "box": [
+      0.2,
+      0.58,
+      0.47,
+      0.88
+     ],
+     "mode": "blur",
+     "size": 2
+    }
+   ]
+  },
+  {
+   "bucket": "cards",
+   "name": "card-neem",
+   "key": "neem",
+   "cand": "wc-neem#16",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Fresh young neem leaves glowing in soft sunlight"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-lotion",
+   "key": "lotion",
+   "cand": "sx-bath#8",
+   "focus": [
+    0.62,
+    0.4
+   ],
+   "zoom": 1.4,
+   "alt": "Hands lathering soap beside a white washbasin"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-micellar",
+   "key": "micellar",
+   "cand": "sx-cosmetic#10",
+   "focus": [
+    0.45,
+    0.42
+   ],
+   "zoom": 1.25,
+   "alt": "Clear cleansing liquid being poured onto a pad"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-iceroller",
+   "key": "iceroller",
+   "cand": "wc-skincare#3",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Green facial ice roller, cucumber slices and a sheet mask on a pink surface"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-dropper",
+   "key": "dropper",
+   "cand": "fh-all#0",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "alt": "Amber dropper bottle standing among sprigs of rosemary"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-rollers",
+   "key": "rollers",
+   "cand": "sx-beauty#8",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "alt": "Colourful silicone ice moulds filled with fruit and cucumber on a pink backdrop"
+  },
+  {
+   "bucket": "cards",
+   "name": "card-turmeric",
+   "key": "turmeric",
+   "cand": "fh-all#25",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Wooden spoon of bright turmeric powder on a dark background"
+  },
+  {
+   "bucket": "leaderboards",
+   "name": "lb-winter",
+   "key": "winter",
+   "cand": "sx-cream#17",
+   "focus": [
+    0.5,
+    0.66
+   ],
+   "alt": "Hands cradling a jar of rich cream against a soft white robe"
+  },
+  {
+   "bucket": "leaderboards",
+   "name": "lb-citrus",
+   "key": "citrus",
+   "cand": "sx-beauty#3",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Lemon slices and a blue silicone ice mould on a pink surface"
+  },
+  {
+   "bucket": "leaderboards",
+   "name": "lb-palette",
+   "key": "palette",
+   "cand": "sx-makeup#22",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Close-up of a colourful eyeshadow palette"
+  },
+  {
+   "bucket": "video",
+   "name": "vid-1-brushes",
+   "key": "scene-1",
+   "cand": "sx-makeup#6",
+   "focus": [
+    0.6,
+    0.5
+   ],
+   "alt": "Make-up brushes ready on the dressing table"
+  },
+  {
+   "bucket": "video",
+   "name": "vid-2-lipstick",
+   "key": "scene-2",
+   "cand": "sx-lipstick#7",
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "zoom": 1.2,
+   "alt": "Hand holding a bold red lipstick"
+  },
+  {
+   "bucket": "video",
+   "name": "vid-3-liner",
+   "key": "scene-3",
+   "cand": "sx-salon#8",
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "alt": "Lip liner being traced along the lips"
+  },
+  {
+   "bucket": "video",
+   "name": "vid-4-powder",
+   "key": "scene-4",
+   "cand": "sx-makeup#25",
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "alt": "Brush sweeping through a pressed powder compact"
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-oily-skin",
+   "key": "r1",
+   "cand": "sx-bath#14",
+   "focus": [
+    0.6,
+    0.55
+   ],
+   "alt": "Hand rinsing under a running tap at a white basin"
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-beard",
+   "key": "r2",
+   "cand": "sx-shave#0",
+   "focus": [
+    0.36,
+    0.55
+   ],
+   "alt": "Barber shaping a lathered beard with a straight razor"
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-hair-fall",
+   "key": "r3",
+   "cand": "sx-hair2#0",
+   "focus": [
+    0.42,
+    0.5
+   ],
+   "alt": "Woman gathering her long hair into a ponytail, seen from behind"
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-lipstick",
+   "key": "r4",
+   "cand": "sx-lipstick#1",
+   "focus": [
+    0.55,
+    0.62
+   ],
+   "zoom": 1.2,
+   "alt": "Hand holding an open berry-pink lipstick",
+   "retouch": [
+    {
+     "box": [
+      0.36,
+      0.19,
+      0.63,
+      0.6
+     ],
+     "mode": "blur",
+     "size": 5
+    }
+   ]
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-sensitive",
+   "key": "r5",
+   "cand": "sx-cream#22",
+   "focus": [
+    0.52,
+    0.6
+   ],
+   "alt": "Hands holding an open jar of soothing cream"
+  },
+  {
+   "bucket": "reels",
+   "name": "reel-perfume",
+   "key": "r6",
+   "cand": "wc-perf2#4",
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "alt": "Glass perfume bottle beaded with water droplets in warm red light"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-skin",
+   "key": "skin",
+   "cand": "wc-skincare#4",
+   "focus": [
+    0.62,
+    0.55
+   ],
+   "alt": "Hands holding an open jar of natural skincare balm"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-face",
+   "key": "face",
+   "cand": "sx-bath#32",
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "alt": "Hands under running water beside a soap dispenser"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-hair",
+   "key": "hair",
+   "cand": "sx-hairbr#0",
+   "focus": [
+    0.5,
+    0.27
+   ],
+   "alt": "Long golden-brown hair in soft window light, seen from behind",
+   "zoom": 1.6
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-oil",
+   "key": "oil",
+   "cand": "wc-coco#21",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Fresh coconut halves showing white flesh"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-makeup",
+   "key": "makeup",
+   "cand": "sx-makeup#14",
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "alt": "Hands holding a powder compact and a fluffy brush",
+   "retouch": [
+    {
+     "box": [
+      0.53,
+      0.43,
+      0.7,
+      0.61
+     ],
+     "mode": "blur",
+     "size": 6
+    }
+   ]
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-body",
+   "key": "body",
+   "cand": "px-spa#1",
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "alt": "Glass soap dispenser on a white washbasin"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-men",
+   "key": "men",
+   "cand": "sx-salon#5",
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "alt": "Barber scissors and comb on a polished wooden counter"
+  },
+  {
+   "bucket": "categories",
+   "name": "cat-fragrance",
+   "key": "fragrance",
+   "cand": "wc-perf2#5",
+   "focus": [
+    0.47,
+    0.5
+   ],
+   "alt": "Dark perfume bottle beaded with water droplets in low light"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-hairfall",
+   "key": "hairfall",
+   "cand": "fh-all#22",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Fenugreek seeds in a heart-shaped wooden dish"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-acne",
+   "key": "acne",
+   "cand": "wc-aloe#2",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "alt": "Close-up of a fresh green aloe vera rosette"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-dandruff",
+   "key": "dandruff",
+   "cand": "wc-neem#4",
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "alt": "Sprig of fresh neem leaves"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-dull",
+   "key": "dull",
+   "cand": "sx-beauty#14",
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "alt": "Lemon slices around a blue silicone ice mould on pink"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-tan",
+   "key": "tan",
+   "cand": "fh-all#14",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "alt": "Fresh turmeric roots beside a spoon of turmeric powder"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-dry",
+   "key": "dry",
+   "cand": "sx-cream#14",
+   "focus": [
+    0.55,
+    0.62
+   ],
+   "alt": "Fingertip scooping rich cream from a white jar"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-frizz",
+   "key": "frizz",
+   "cand": "wc-hbrush#6",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Macro of soft pink hairbrush bristles"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-darkcircles",
+   "key": "darkcircles",
+   "cand": "sx-beauty#10",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Cucumber slices around a green silicone ice mould on pink"
+  },
+  {
+   "bucket": "concerns",
+   "name": "cn-beard",
+   "key": "beard",
+   "cand": "wc-beardoil#0",
+   "focus": [
+    0.48,
+    0.5
+   ],
+   "alt": "Amber beard-oil dropper bottle and a wooden beard brush"
+  },
+  {
+   "bucket": "heroes",
+   "name": "hero-advertise",
+   "key": "advertise",
+   "cand": "wc-prodphoto#8",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "alt": "Product photography studio with softboxes, cameras on tripods and a white sweep"
+  },
+  {
+   "bucket": "heroes",
+   "name": "hero-sell",
+   "key": "sell",
+   "cand": "sx-ware#2",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "alt": "Warehouse aisle with tall shelves stacked with cartons"
+  },
+  {
+   "bucket": "heroes",
+   "name": "hero-gifts",
+   "key": "gifts",
+   "cand": "wc-gifts#1",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "alt": "Pink gift box with a satin ribbon and bow beside its open lid"
+  }
+ ],
+ "byAd": {
+  "ad-h1-1": "bb-serum",
+  "ad-h1-2": "bb-hair",
+  "ad-h1-3": "bb-gifts",
+  "ad-h1-4": "bb-minimal",
+  "ad-h1-5": "bb-sunscreen",
+  "ad-h2-1": "card-sensitive",
+  "ad-h2-2": "card-neem",
+  "ad-h2-3": "card-lotion",
+  "ad-h2-4": "card-micellar",
+  "ad-h3-1": "lb-winter",
+  "ad-h5-1": "vid-2-lipstick",
+  "ad-h8-1": "bb-ayurveda",
+  "ad-h8-2": "bb-fragrance",
+  "ad-h10-1": "card-iceroller",
+  "ad-h11-1": "bb-herbal",
+  "ad-s2-1": "card-dropper",
+  "ad-p2-1": "card-rollers",
+  "ad-c2-1": "bb-men"
+ }
+}

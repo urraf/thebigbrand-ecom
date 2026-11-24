@@ -1,0 +1,62 @@
+/* =========================================================
+   Store UI kit — additions on top of the shared design system in src/styles/theme.css
+   (brand wordmark, product image frame + photo handling, card states, rail, toast action, flyout meter).
+   Imported by the UI components themselves so they look right wherever they are used.
+   ========================================================= */
+
+/* ---------- brand wordmark ---------- */
+.blogo { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1.05; white-space: nowrap; }
+.blogo small { display: block; font-size: .42em; letter-spacing: .3em; line-height: 1; margin-top: 2px; }
+.blogo-img { flex-direction: row; align-items: center; }
+.blogo-img img { height: 100%; width: auto; max-width: 160px; object-fit: contain; }
+
+/* ---------- product visual (photo or packshot) ---------- */
+.pimg { position: relative; display: grid; place-items: center; overflow: hidden; border-radius: 10px; aspect-ratio: 1; background: color-mix(in srgb, var(--tint, #e7e4ee) 12%, #f4f3f8); }
+.pimg > .art { width: 78%; height: 92%; }
+.pv-photo { position: absolute; inset: 14px; display: block; }
+.pv-photo img { object-fit: contain; mix-blend-mode: multiply; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+.pimg .pv-photo { inset: 7%; }
+.pc-img .pv-photo { inset: 16px; }
+.pc:hover .pc-img .pv-photo img { transform: scale(1.05); }
+.sd-art .art, .af-art .art { width: 100%; height: 100%; }
+.sd-art .pv-photo { inset: 2px; }
+.af-art .pv-photo { inset: 4px; }
+
+/* ---------- product card states ---------- */
+.pc-wish { z-index: 2; transition: color .15s, transform .15s; }
+.pc-wish:hover { color: var(--coral); transform: scale(1.06); }
+.pc-wish.on svg { fill: currentColor; }
+.pc-new { font-size: 12.5px; color: var(--muted); }
+/* demo coral (#ff3d6e) is 3.4:1 on white — a deeper coral keeps the look and passes WCAG AA for 12px text */
+.pc-gift { color: #d81b55; }
+.pc-gift .ic { color: var(--coral); }
+.pc-stock { font-size: 12px; font-weight: 700; color: var(--sale); }
+.btn-cart .ic { width: 15px; height: 15px; stroke-width: 2.6; }
+.btn-cart.is-added { background: var(--mint); box-shadow: 0 6px 16px rgba(15,159,110,.28); }
+.btn-cart.is-soldout, .btn-cart.is-soldout[disabled] { background: #efedf4; color: var(--muted); box-shadow: none; opacity: 1; }
+.btn-cart[aria-busy="true"] { filter: saturate(.85); cursor: progress; }
+.pc.is-soldout .pc-img > :first-child { filter: grayscale(.5); opacity: .8; }
+.pc-name { color: var(--text); }
+/* buttons line up along the bottom of a grid row (cards stretch to the tallest one); keeps the demo's 8px minimum gap */
+.pc-body > .btn-cart:last-child { margin-top: auto; }
+.pc-body > :nth-last-child(2) { margin-bottom: 4px; }
+.slot-card { display: flex; flex-direction: column; min-width: 0; border-radius: var(--radius); }
+.slot-card > .pc { flex: 1; }
+
+/* ---------- rail ---------- */
+.rail-track > .pc, .rail-track > .slot-card { width: var(--rail-item, 220px); }
+.rail-btn[disabled] { opacity: 0 !important; pointer-events: none; }
+.rail-btn:hover { background: #fff; color: var(--coral); }
+@media (hover: none) { .rail-btn { display: none; } }
+@media (max-width: 600px) { .rail-track > .pc, .rail-track > .slot-card { width: var(--rail-item-m, 172px); } }
+
+/* ---------- toast action + flyout meter ---------- */
+#toast { pointer-events: none; }
+#toast.show { pointer-events: auto; }
+#toast .toast-act { margin-left: 2px; padding: 4px 11px; border-radius: 999px; background: rgba(255,255,255,.14); color: var(--sun); font-weight: 700; font-size: 13px; white-space: nowrap; }
+#toast .toast-act:hover { background: rgba(255,255,255,.24); }
+.af-gift > span { flex: 1; min-width: 0; }
+.af-meter { display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: #ffd9e2; overflow: hidden; }
+.af-meter i { display: block; height: 100%; width: var(--p, 0%); border-radius: inherit; background: var(--grad); transition: width .4s ease; }
+.af-item b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.af-btns .btn { padding-inline: 12px; }

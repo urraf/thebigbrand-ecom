@@ -2,7 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import type { NextRequest, NextResponse } from "next/server";
+import { connection, type NextRequest, type NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
 import { db, type Role, type Seller } from "@/lib/db";
@@ -136,6 +136,7 @@ export async function clearSessionCookie() {
 
 /** Server Components / Server Actions. Memoised per request. Dynamic (reads cookies) → wrap callers in <Suspense>. */
 export const getAuth = cache(async (): Promise<AuthContext | null> => {
+  await connection(); // request-time only (JWT expiry check reads the clock)
   const jar = await cookies();
   let token = jar.get(COOKIES.session)?.value;
   if (!token) {

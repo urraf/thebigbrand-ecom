@@ -1,0 +1,99 @@
+/* =========================================================
+   Store chrome — additions on top of theme.css (header/sub-nav/footer/tab bar/drawer base styles live there).
+   ========================================================= */
+
+/* ---------- a11y ---------- */
+.skip-link { position: absolute; left: 12px; top: -64px; z-index: 200; padding: 10px 16px; border-radius: 10px; background: var(--hdr); color: #fff; font-weight: 600; box-shadow: var(--shadow-lg); transition: top .2s; }
+.skip-link:focus { top: 12px; }
+#main:focus { outline: none; }
+
+/* ---------- header ---------- */
+.hdr-loc > span { display: block; min-width: 0; }
+.hdr-loc b { max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+.hdr-acc { min-width: 0; }
+.cart-n:empty { display: none; }
+.s-ico.is-on { color: var(--coral); animation: tbb-pulse 1s ease-in-out infinite; }
+@keyframes tbb-pulse { 50% { opacity: .45; } }
+/* small laptops: give the search box room (deliver-to collapses to its pin icon) */
+@media (max-width: 1180px) and (min-width: 961px) {
+  .hdr-loc > span, .hdr-cart > b { display: none; }
+  .hdr-loc .ic { width: 22px; height: 22px; }
+}
+/* tablet-landscape widths: drop the photo-search button and the account greeting line before the input gets cramped */
+@media (max-width: 1100px) and (min-width: 961px) {
+  .search .s-ico[data-action="visual-search"] { display: none; }
+}
+@media (max-width: 1040px) and (min-width: 961px) {
+  .hdr-acc small { display: none; }
+  .hdr-row { gap: 6px; }
+}
+.hdr-locbar { width: 100%; border: 0; text-align: left; cursor: pointer; }
+.hdr-locbar .wrap > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.hdr-locbar b { font-weight: 700; }
+
+/* collapse trailing category links on narrower desktops so the row never scrolls the
+   "Advertise with us" pill away (they are always in the All menu; phones scroll the full row) */
+@media (max-width: 1360px) and (min-width: 961px) { .subnav .sn-c6 { display: none; } }
+@media (max-width: 1180px) and (min-width: 961px) { .subnav .sn-c4 { display: none; } }
+@media (max-width: 1060px) and (min-width: 961px) { .subnav .sn-c2 { display: none; } }
+
+/* ---------- search dropdown ---------- */
+.s-drop { overscroll-behavior: contain; }
+.sd-sp .pz-badge { flex: none; }
+.sd-sp.is-active { background: #ffeef2; }
+.sd-row.is-active { background: var(--soft); }
+.sd-chip.is-active { border-color: var(--coral); color: var(--coral); }
+.sd-q small { margin-left: 6px; }
+.sd-h-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sd-clear { font: 600 12px/1 var(--f-ui); letter-spacing: 0; text-transform: none; color: var(--violet); padding: 4px 6px; border-radius: 6px; }
+.sd-clear:hover { background: var(--soft); }
+
+/* ---------- deliver-to dialog ---------- */
+.loc-dlg { margin: auto; width: min(420px, calc(100% - 24px)); padding: 0; border: 0; border-radius: 18px; background: #fff; color: var(--text); box-shadow: var(--shadow-lg); }
+.loc-dlg::backdrop { background: rgba(10,5,20,.55); }
+.loc-dlg[open] { animation: tbb-pop .22s cubic-bezier(.2,.8,.2,1); }
+@keyframes tbb-pop { from { transform: translateY(10px) scale(.98); opacity: 0; } }
+.loc-in { display: grid; gap: 12px; padding: 18px 18px 20px; }
+.loc-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.loc-h h2 { font-size: 19px; }
+.loc-in > .muted { font-size: 13.5px; margin-top: -4px; }
+.loc-cur { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; background: var(--soft); font-size: 13.5px; }
+.loc-cur .ic { width: 18px; height: 18px; color: var(--coral); }
+.loc-field { display: grid; gap: 6px; font-size: 13px; font-weight: 600; }
+.loc-field input { font-size: 16px; letter-spacing: .14em; }
+.loc-field input[aria-invalid="true"] { border-color: var(--sale); }
+.loc-err { margin-top: -4px; font-size: 13px; font-weight: 600; color: var(--sale); }
+.loc-go { width: 100%; }
+.loc-note { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.loc-note .ic { display: inline-block; vertical-align: -3px; width: 15px; height: 15px; margin-right: 2px; color: var(--mint); }
+
+/* ---------- drawer ---------- */
+body.menu-open { overflow: hidden; }
+.mn-head b a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.mn-body a > span[aria-hidden] { width: 20px; text-align: center; }
+
+/* ---------- footer ---------- */
+.ft-copy a { color: rgba(255,255,255,.85); text-decoration: underline; text-underline-offset: 2px; }
+.ft-copy a:hover { color: #fff; }
+.ft-bottom .chip-d { cursor: default; }
+.ft-bottom button.chip-d { cursor: pointer; }
+
+/* ---------- chrome-off pages (focused checkout etc.) ---------- */
+body:has([data-chrome-off]) #hdr,
+body:has([data-chrome-off]) #ftr,
+body:has([data-chrome-off]) #tabbar { display: none !important; }
+@media (max-width: 960px) { body:has([data-chrome-off]) { padding-bottom: 0; } }
+
+/* ---------- store messages (404 / error) ---------- */
+.st-msg { padding: 48px 0 24px; }
+.st-msg-card { display: grid; justify-items: center; gap: 12px; padding: 56px 24px; text-align: center; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
+.st-msg-ic { width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center; background: var(--grad); color: #fff; box-shadow: 0 10px 30px rgba(255,61,110,.35); }
+.st-msg-ic .ic { width: 30px; height: 30px; }
+.st-msg h1 { font-size: clamp(24px, 3.2vw, 34px); }
+.st-msg p { max-width: 520px; color: var(--muted); }
+.st-msg-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.st-msg-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 10px; }
+.st-msg code { font-size: 12px; color: var(--muted); }
+
+/* footer column headings are h2 (correct outline after the page's h1/h2s) styled like the demo's h4 */
+.ft-grid h2 { color: #fff; font-size: 15px; margin-bottom: 12px; }

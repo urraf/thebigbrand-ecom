@@ -1,0 +1,34 @@
+/* /kit — UI kit showcase page */
+.kit { padding: 20px 0 10px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.kit > * { min-width: 0; }
+.kit-hero { display: grid; gap: 10px; padding: 8px 2px 0; }
+.kit-hero h1 { font-size: clamp(26px, 3vw, 36px); }
+.kit-hero p { max-width: 900px; }
+.kit code { font-size: .9em; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; }
+.kit-toc { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-sec { scroll-margin-top: 16px; }
+.kit-note { font-size: 13px; color: var(--muted); }
+.kit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.kit-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.kit-row + .kit-row { margin-top: 14px; }
+.kit-heart { position: relative; width: 40px; height: 40px; }
+.kit-heart .pc-wish { top: 3px; right: 3px; }
+.kit-shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; }
+.kit-shapes figure { display: grid; gap: 8px; }
+.kit-shapes figcaption { display: grid; font-size: 12.5px; color: var(--muted); text-align: center; }
+.kit-shapes figcaption b { color: var(--text); text-transform: capitalize; }
+.kit-raw { --tint: #ff3d6e; }
+.kit-brands { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.kit-brand { min-width: 0; overflow: hidden; display: grid; place-items: center; gap: 6px; min-height: 92px; padding: 14px 10px; border-radius: 12px; border: 1px solid var(--line); }
+.kit-brand small { font-size: 11px; color: #3d3650; background: rgba(255,255,255,.82); padding: 1px 7px; border-radius: 6px; }
+.kit-prices { gap: 18px 32px; }
+.kit-star { display: inline-flex; align-items: center; gap: 6px; }
+.kit-slot { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 18px; border-radius: 12px; background: linear-gradient(90deg, #fff4f6, #fff); border: 1px solid #ffe0e7; font-size: 14px; }
+.kit-icons { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+.kit-icons li { display: grid; justify-items: center; gap: 6px; padding: 12px 6px; border-radius: 10px; background: var(--soft); }
+.kit-icons small { font-size: 11px; color: var(--muted); }
+@media (max-width: 600px) {
+  .kit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .kit-brands { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kit-brand .blogo { font-size: 17px !important; }
+}

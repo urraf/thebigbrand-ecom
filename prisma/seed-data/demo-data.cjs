@@ -43,21 +43,21 @@ module.exports = (() => {
     { id: 'min-niacin',   name: '10% Niacinamide Face Serum for Acne Marks',  brand: 'minimalist', cat: 'skin', price: 599, mrp: 649,  size: '30 ml',  shape: 'dropper', c1: '#efefef', c2: '#151515', rating: 4.3, reviews: 38910, concerns: ['acne', 'dull'], tag: "Editor's pick" },
     { id: 'min-spf',      name: 'SPF 50 Lightweight Sunscreen, No White Cast', brand: 'minimalist', cat: 'skin', price: 399, mrp: 449,  size: '50 g',   shape: 'tube',    c1: '#f6f6f6', c2: '#151515', rating: 4.2, reviews: 21300, concerns: ['tan'] },
     { id: 'nivea-cream',  name: 'Soft Light Moisturising Cream with Jojoba Oil', brand: 'nivea',    cat: 'skin', price: 249, mrp: 299,  size: '200 ml', shape: 'jar',     c1: '#0a2a8a', c2: '#ffffff', rating: 4.5, reviews: 59310, concerns: ['dry'] },
-    { id: 'lakme-ss',     name: 'Sun Expert SPF 50 PA+++ Ultra Matte Gel',     brand: 'lakme',      cat: 'skin', price: 329, mrp: 399,  size: '100 ml', shape: 'tube',    c1: '#f57c00', c2: '#fff3e0', rating: 4.2, reviews: 13120, concerns: ['tan'] },
+    { id: 'lakme-ss',     name: '9to5 Sun Expert Super Matte Sunscreen Lotion SPF 50', brand: 'lakme', cat: 'skin', price: 449, mrp: 510,  size: '100 ml', shape: 'tube',    c1: '#f57c00', c2: '#fff3e0', rating: 4.2, reviews: 13120, concerns: ['tan'] },
     { id: 'cet-moist',    name: 'Moisturising Cream for Dry to Very Dry Skin', brand: 'cetaphil',   cat: 'skin', price: 499, mrp: 575,  size: '80 g',   shape: 'jar',     c1: '#e8eef6', c2: '#1b4f9c', rating: 4.6, reviews: 9870,  concerns: ['dry'], tag: 'Derm pick' },
     { id: 'derma-vitc',   name: '10% Vitamin C Face Serum for Glowing Skin',   brand: 'dermaco',    cat: 'skin', price: 549, mrp: 599,  size: '30 ml',  shape: 'dropper', c1: '#ff9f1c', c2: '#2b1b0e', rating: 4.1, reviews: 7720,  concerns: ['dull', 'darkcircles'] },
     { id: 'gar-bright',   name: 'Bright Complete Vitamin C Serum Cream',       brand: 'garnier',    cat: 'skin', price: 199, mrp: 249,  size: '45 g',   shape: 'tube',    c1: '#f9a825', c2: '#1b5e20', rating: 4.2, reviews: 24410, concerns: ['dull', 'darkcircles'] },
     // face wash
     { id: 'cet-cl',       name: 'Gentle Skin Cleanser for Sensitive Skin',     brand: 'cetaphil',   cat: 'face', price: 399, mrp: 459,  size: '125 ml', shape: 'pump',    c1: '#e8eef6', c2: '#1b4f9c', rating: 4.7, reviews: 51200, concerns: ['dry'], tag: 'Derm pick' },
     { id: 'him-fw',       name: 'Purifying Neem Face Wash for Pimples',        brand: 'himalaya',   cat: 'face', price: 165, mrp: 199,  size: '150 ml', shape: 'tube',    c1: '#2e7d32', c2: '#c8e6c9', rating: 4.3, reviews: 87400, concerns: ['acne'], tag: 'Bestseller' },
-    { id: 'derma-sal',    name: '2% Salicylic Acid Foaming Face Wash',         brand: 'dermaco',    cat: 'face', price: 349, mrp: 399,  size: '80 ml',  shape: 'tube',    c1: '#ffffff', c2: '#00897b', rating: 4.3, reviews: 27600, concerns: ['acne'] },
+    { id: 'derma-sal',    name: 'Sali-Cinamide Anti-Acne Face Wash',           brand: 'dermaco',    cat: 'face', price: 349, mrp: 399,  size: '80 ml',  shape: 'tube',    c1: '#ffffff', c2: '#00897b', rating: 4.3, reviews: 27600, concerns: ['acne'] },
     { id: 'gar-micellar', name: 'Micellar Cleansing Water, Makeup Remover',    brand: 'garnier',    cat: 'face', price: 299, mrp: 349,  size: '400 ml', shape: 'bottle',  c1: '#e91e63', c2: '#fce4ec', rating: 4.5, reviews: 70200, concerns: ['dull'] },
     { id: 'mama-vitc',    name: 'Vitamin C Face Wash with Turmeric',           brand: 'mamaearth',  cat: 'face', price: 249, mrp: 299,  size: '100 ml', shape: 'tube',    c1: '#ff9800', c2: '#fff8e1', rating: 4.2, reviews: 66500, concerns: ['dull', 'tan'] },
     { id: 'plum-gt',      name: 'Green Tea Pore Cleansing Face Wash',          brand: 'plum',       cat: 'face', price: 345, mrp: 399,  size: '120 ml', shape: 'tube',    c1: '#7cb342', c2: '#1b3a0a', rating: 4.3, reviews: 19800, concerns: ['acne'] },
     // hair
     { id: 'lo-shampoo',   name: 'Total Repair 5 Shampoo for Damaged Hair',     brand: 'loreal',     cat: 'hair', price: 349, mrp: 449,  size: '340 ml', shape: 'bottle',  c1: '#b3122e', c2: '#e9c46a', rating: 4.5, reviews: 23100, concerns: ['frizz'], tag: 'Bestseller' },
     { id: 'dove-sh',      name: 'Intense Repair Shampoo for Damaged Hair',     brand: 'dove',       cat: 'hair', price: 299, mrp: 375,  size: '340 ml', shape: 'bottle',  c1: '#f1f4fa', c2: '#1d3c78', rating: 4.4, reviews: 62300, concerns: ['frizz'] },
-    { id: 'him-shamp',    name: 'Anti-Dandruff Shampoo with Tea Tree',         brand: 'himalaya',   cat: 'hair', price: 240, mrp: 280,  size: '400 ml', shape: 'bottle',  c1: '#00695c', c2: '#e0f2f1', rating: 4.2, reviews: 33800, concerns: ['dandruff'] },
+    { id: 'him-shamp',    name: 'Anti-Dandruff Shampoo with Tea Tree',         brand: 'himalaya',   cat: 'hair', price: 175, mrp: 199,  size: '180 ml', shape: 'bottle',  c1: '#00695c', c2: '#e0f2f1', rating: 4.2, reviews: 33800, concerns: ['dandruff'] },
     { id: 'mama-onion-sh',name: 'Onion Shampoo for Hair Fall Control',         brand: 'mamaearth',  cat: 'hair', price: 349, mrp: 399,  size: '250 ml', shape: 'bottle',  c1: '#6d2c91', c2: '#f1e4ff', rating: 4.1, reviews: 41200, concerns: ['hairfall'] },
     { id: 'lo-cond',      name: 'Total Repair 5 Conditioner',                  brand: 'loreal',     cat: 'hair', price: 249, mrp: 299,  size: '180 ml', shape: 'bottle',  c1: '#8b0f24', c2: '#e9c46a', rating: 4.4, reviews: 11200, concerns: ['frizz'] },
     // oils
@@ -206,7 +206,7 @@ module.exports = (() => {
   /* Sponsored search suggestions (S1) — matched on keywords */
   const SEARCH_ADS = [
     { brand: 'mamaearth',  keywords: ['hair', 'fall', 'onion', 'oil', 'shampoo', 'growth'], text: 'Mamaearth Onion Hair Fall range — up to 30% off', href: '#/brand/mamaearth' },
-    { brand: 'dermaco',    keywords: ['acne', 'pimple', 'salicylic', 'face wash', 'oily'],  text: 'The Derma Co 2% Salicylic Face Wash', href: '#/p/derma-sal' },
+    { brand: 'dermaco',    keywords: ['acne', 'pimple', 'salicylic', 'face wash', 'oily'],  text: 'The Derma Co Sali-Cinamide Anti-Acne Face Wash', href: '#/p/derma-sal' },
     { brand: 'minimalist', keywords: ['serum', 'niacinamide', 'vitamin', 'glow', 'dull', 'marks'], text: 'Minimalist 10% Niacinamide Serum', href: '#/p/min-niacin' },
     { brand: 'lakme',      keywords: ['sun', 'spf', 'tan', 'sunscreen', 'lip', 'kajal', 'makeup'], text: 'Lakmé Sun Expert SPF 50', href: '#/p/lakme-ss' },
     { brand: 'loreal',     keywords: [], text: "L'Oréal Revitalift Hyaluronic Serum — 10% off", href: '#/p/lo-hyal' },

@@ -1,0 +1,43 @@
+{
+  "_note": "Merchandising choices applied by prisma/seed.ts. Product refs are demo ids (demo-data.cjs) or catalogue slugs (catalog/*.json). brandBanners maps a brand id to a billboard `key` in ad-images.json (Brand.bannerUrl); some banners are shared because the licensed library has 11 billboards for 16 brands.",
+  "brandBanners": {
+    "loreal": "serum",
+    "dermaco": "serum",
+    "minimalist": "minimal",
+    "nivea": "minimal",
+    "himalaya": "herbal",
+    "plum": "herbal",
+    "mamaearth": "hair",
+    "parachute": "hair",
+    "dove": "bath",
+    "cetaphil": "bath",
+    "lakme": "makeup",
+    "garnier": "sunscreen",
+    "biotique": "ayurveda",
+    "beardo": "men",
+    "bellavita": "fragrance",
+    "tbb": "gifts"
+  },
+  "adProducts": {
+    "ad-h1-5": ["lakme-ss", "lakme-9to5-sun-expert-tint-hint-sunscreen-spf-50"],
+    "ad-h2-2": ["him-fw", "himalaya-purifying-neem-foaming-face-wash", "him-shamp"],
+    "ad-h2-4": ["gar-micellar", "garnier-micellar-vitamin-c-cleansing-water", "garnier-skinactive-micellar-foaming-face-wash"],
+    "ad-h3-1": ["nivea-cream", "nivea-lotion", "nivea-creme-all-season-multi-purpose-cream", "nivea-original-care-lip-balm"],
+    "ad-h5-1": ["lakme-lip", "lakme-kajal", "lakme-9to5-cc-cream-spf-30"],
+    "ad-h11-1": ["him-fw", "him-shamp", "himalaya-purifying-neem-foaming-face-wash", "himalaya-hydrating-aloe-vera-face-wash", "himalaya-anti-hair-fall-bhringaraja-shampoo", "himalaya-neem-and-turmeric-soap"],
+    "ad-s2-1": ["derma-sal", "the-derma-co-sali-cinamide-anti-acne-serum", "derma-vitc"],
+    "ad-p2-1": ["plum-gt", "plum-green-tea-oil-free-moisturiser"],
+    "ad-c2-1": ["beardo-oil", "beardo-fw", "beardo-de-tan-coffee-detox-face-wash-200ml"]
+  },
+  "sponsoredProducts": [
+    "minimalist-vitamin-b5-10-oil-free-moisturizer",
+    "derma-sal",
+    "mama-vitc",
+    "lo-hyal",
+    "cet-cl",
+    "gar-micellar",
+    "plum-rice-water-and-niacinamide-3-toner",
+    "beardo-de-tan-coffee-detox-face-wash-200ml"
+  ],
+  "cartAddons": ["lakme-peach-milk-soft-creme-moisturiser", "nivea-original-care-lip-balm", "him-fw", "para-aloe"]
+}

@@ -1,0 +1,874 @@
+{
+ "products": [
+  {
+   "slug": "lakme-peach-milk-soft-creme-moisturiser",
+   "name": "Peach Milk Soft Crème Moisturiser",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "65 g",
+   "mrp": 165,
+   "price": 139,
+   "rating": 4.4,
+   "reviews": 41820,
+   "concerns": [
+    "dry",
+    "dull"
+   ],
+   "tags": [
+    "moisturiser",
+    "face cream",
+    "peach milk",
+    "lakme peach milk",
+    "daily moisturiser",
+    "soft creme",
+    "dry skin cream"
+   ],
+   "badge": "Bestseller",
+   "description": "Lakmé's everyday face crème blends peach extract with milk proteins in a light, non-greasy texture that sinks in quickly. It keeps skin soft and supple for up to 24 hours and sits well under makeup.",
+   "bullets": [
+    "24-hour moisture lock",
+    "Peach extract and milk proteins",
+    "Light, non-sticky finish",
+    "Works as a smooth base for makeup"
+   ],
+   "howToUse": "Take a small amount and dot on the forehead, cheeks and chin. Spread in gentle upward strokes until absorbed. Use morning and night.",
+   "ingredients": "Key ingredients: Demineralised Water, Cyclopentasiloxane, Sorbitol, Sunflower Seed Oil, Isohexadecane, Glycol Stearate, Titanium Dioxide, Dimethiconol, Polysorbate 80, Peach Extract (Prunus Persica), Non-fat Dry Milk, Alpha-Isomethyl Ionone, Citronellol, CI 14700.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-peach-milk-soft-creme-moisturiser.webp",
+     "alt": "Lakmé Peach Milk Soft Crème jar, lid view",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/07102442",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-absolute-argan-oil-serum-foundation-spf-45",
+   "name": "Absolute Argan Oil Serum Foundation SPF 45",
+   "brand": "lakme",
+   "category": "makeup",
+   "size": "15 ml",
+   "mrp": 950,
+   "price": 799,
+   "rating": 4.2,
+   "reviews": 6340,
+   "concerns": [],
+   "tags": [
+    "foundation",
+    "serum foundation",
+    "lakme absolute",
+    "argan oil",
+    "spf foundation",
+    "liquid foundation",
+    "dewy foundation"
+   ],
+   "badge": null,
+   "description": "A lightweight serum foundation from the Lakmé Absolute range, infused with argan oil for a fresh, skin-like glow. Buildable coverage evens out the look of skin tone, with SPF 45 for daytime wear.",
+   "bullets": [
+    "Serum-light texture with argan oil",
+    "Buildable, natural-looking coverage",
+    "SPF 45 for everyday wear",
+    "Dewy, hydrated finish"
+   ],
+   "howToUse": "Shake well. Dot a few drops over the face and blend outward with fingertips, a brush or a damp sponge. Build a second layer where needed.",
+   "ingredients": "Key ingredients: Argania Spinosa (Argan) Kernel Oil, broad-spectrum UV filters (SPF 45), Iron Oxides for colour.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-absolute-argan-oil-serum-foundation-spf-45.webp",
+     "alt": "Lakmé Absolute Argan Oil Serum Foundation SPF 45 carton",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030640575",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-peach-milk-ultra-light-gel-moisturiser",
+   "name": "Peach Milk Ultra Light Gel Moisturiser",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "100 g",
+   "mrp": 275,
+   "price": 233,
+   "rating": 4.3,
+   "reviews": 9870,
+   "concerns": [
+    "dry"
+   ],
+   "tags": [
+    "gel moisturiser",
+    "oil free moisturiser",
+    "peach milk gel",
+    "lakme gel",
+    "oily skin moisturiser",
+    "summer moisturiser"
+   ],
+   "badge": null,
+   "description": "An oil-free gel version of the Peach Milk moisturiser, made for humid days and oily or combination skin. The water-light texture absorbs fast and keeps skin hydrated for up to 24 hours without shine.",
+   "bullets": [
+    "Oil-free, water-light gel",
+    "24-hour moisture lock",
+    "No greasy after-feel",
+    "Peach extract for a fresh finish"
+   ],
+   "howToUse": "Apply a small amount to clean face and neck and massage in until absorbed. Use morning and night, or as often as skin feels tight.",
+   "ingredients": "Key ingredients: Peach Extract (Prunus Persica), Milk Protein, Glycerin.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-peach-milk-ultra-light-gel-moisturiser.webp",
+     "alt": "Lakmé Peach Milk Ultra Light-Weight Gel jar, lid view",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030865275",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-peach-milk-vit-e-spf-24-moisture-riser-lotion",
+   "name": "Peach Milk Vit E + SPF 24 Moisture-Riser Lotion",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "60 ml",
+   "mrp": 149,
+   "price": 134,
+   "rating": 4.3,
+   "reviews": 18240,
+   "concerns": [
+    "dry",
+    "tan"
+   ],
+   "tags": [
+    "moisturiser with spf",
+    "spf 24 lotion",
+    "peach milk lotion",
+    "vitamin e moisturiser",
+    "day cream",
+    "lakme moisture riser"
+   ],
+   "badge": null,
+   "description": "A two-in-one day lotion that pairs Vitamin E with SPF 24 sun protection, so moisturising and sun care happen in one step. It leaves skin soft and smooth with a light, non-sticky feel.",
+   "bullets": [
+    "Vitamin E serum for soft, smooth skin",
+    "SPF 24 for everyday sun protection",
+    "Light, quick-absorbing lotion",
+    "Handy 60 ml bottle"
+   ],
+   "howToUse": "Apply on cleansed face and neck every morning, smoothing it in evenly. Reapply after long hours outdoors.",
+   "ingredients": "Key ingredients: Water, Octyl Salicylate, Butyl Methoxydibenzoylmethane, Glycerine, Palmitic Acid, Stearic Acid, Phenylbenzimidazole Sulphonic Acid; with Vitamin E and peach extract.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-peach-milk-vit-e-spf-24-moisture-riser-lotion.webp",
+     "alt": "Lakmé Peach Milk Vit E + SPF 24 Moisture-Riser bottle, front of pack",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030974380",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-peach-milk-vit-e-creme-moisture-riser",
+   "name": "Peach Milk Vit E Crème Moisture-Riser",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "300 g",
+   "mrp": 499,
+   "price": 424,
+   "rating": 4.4,
+   "reviews": 7250,
+   "concerns": [
+    "dry"
+   ],
+   "tags": [
+    "face cream",
+    "body cream",
+    "vitamin e cream",
+    "peach milk creme",
+    "family pack moisturiser",
+    "winter cream"
+   ],
+   "badge": null,
+   "description": "A rich crème with Vitamin E and peach milk in a value-size jar that works for face and body. It locks in moisture for up to 24 hours while staying non-sticky.",
+   "bullets": [
+    "Vitamin E for soft, nourished skin",
+    "24-hour moisture lock",
+    "Non-sticky crème texture",
+    "Big 300 g jar for face and body"
+   ],
+   "howToUse": "Scoop a little crème with clean fingers and massage over face, neck, hands or body until absorbed. Use daily, especially after a bath.",
+   "ingredients": "Key ingredients: Tocopheryl Acetate (Vitamin E), Peach Extract, Milk Protein, Glycerin.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-peach-milk-vit-e-creme-moisture-riser.webp",
+     "alt": "Lakmé Peach Milk Vit E Crème Moisture-Riser jar, lid view",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030977657",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-9to5-cc-cream-spf-30",
+   "name": "9to5 CC Cream SPF 30, Almond",
+   "brand": "lakme",
+   "category": "makeup",
+   "size": "30 g",
+   "mrp": 349,
+   "price": 296,
+   "rating": 4.3,
+   "reviews": 25110,
+   "concerns": [
+    "dull",
+    "tan"
+   ],
+   "tags": [
+    "cc cream",
+    "complexion care cream",
+    "lakme cc cream",
+    "light coverage",
+    "tinted moisturiser",
+    "spf 30",
+    "9to5"
+   ],
+   "badge": null,
+   "description": "Lakmé's complexion care cream gives sheer, natural coverage that evens out the look of skin tone while it moisturises. SPF 30 PA++ makes it an easy one-step base for office days.",
+   "bullets": [
+    "Sheer coverage that blends into skin",
+    "SPF 30 PA++ sun protection",
+    "Moisturises as it covers",
+    "Shade: Almond, for medium skin tones"
+   ],
+   "howToUse": "Dot on the forehead, cheeks, nose and chin and blend outward with fingertips. Layer lightly for more coverage.",
+   "ingredients": "Key ingredients: UV filters (SPF 30 PA++), Glycerin, Titanium Dioxide and Iron Oxides for tinted coverage.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-9to5-cc-cream-spf-30.webp",
+     "alt": "Lakmé 9to5 CC Cream tube with carton, shade Almond",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030978036",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-9to5-sun-expert-tint-hint-sunscreen-spf-50",
+   "name": "9to5 Sun Expert Tint Hint Sunscreen SPF 50 PA+++",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "50 g",
+   "mrp": 375,
+   "price": 319,
+   "rating": 4.2,
+   "reviews": 5480,
+   "concerns": [
+    "tan"
+   ],
+   "tags": [
+    "sunscreen",
+    "tinted sunscreen",
+    "spf 50",
+    "lakme sun expert",
+    "no white cast",
+    "tint hint",
+    "daily sunscreen"
+   ],
+   "badge": "New",
+   "description": "A lightly tinted sunscreen from the Sun Expert range that blurs and evens the look of skin while offering broad-spectrum SPF 50 PA+++. The hint of tint helps avoid a white cast on Indian skin tones.",
+   "bullets": [
+    "SPF 50 PA+++ broad-spectrum protection",
+    "Sheer tint, no white cast",
+    "Lightweight, non-greasy texture",
+    "Wear alone or under makeup"
+   ],
+   "howToUse": "Apply generously to face and neck 15 minutes before stepping out. Reapply every 2-3 hours when outdoors or after sweating.",
+   "ingredients": "Key ingredients: Broad-spectrum UV filters (SPF 50 PA+++), Glycerine, Iron Oxides for the sheer tint.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-9to5-sun-expert-tint-hint-sunscreen-spf-50.webp",
+     "alt": "Lakmé 9to5 Sun Expert Tint Hint SPF 50 tube, front of pack",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030978630",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-9to5-powerplay-priming-powder-foundation",
+   "name": "9to5 Powerplay Priming Powder Foundation",
+   "brand": "lakme",
+   "category": "makeup",
+   "size": "9 g",
+   "mrp": 599,
+   "price": 509,
+   "rating": 4.1,
+   "reviews": 3920,
+   "concerns": [],
+   "tags": [
+    "compact",
+    "powder foundation",
+    "priming powder",
+    "lakme compact",
+    "matte compact",
+    "9to5 powerplay",
+    "oil control"
+   ],
+   "badge": null,
+   "description": "A three-in-one pressed powder that primes, covers and sets in one swipe, from the Lakmé 9to5 Fashionista collection. It gives a soft-matte finish that keeps shine in check through the workday.",
+   "bullets": [
+    "Primer, foundation and powder in one",
+    "Soft-matte, shine-controlling finish",
+    "Buildable coverage",
+    "Slim compact with mirror for touch-ups"
+   ],
+   "howToUse": "Swipe the sponge over the powder and press onto the face, starting at the centre and blending outward. Touch up through the day as needed.",
+   "ingredients": "Key ingredients: Talc, Mica, Silica, Titanium Dioxide and Iron Oxides (pressed powder pigments).",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-9to5-powerplay-priming-powder-foundation.webp",
+     "alt": "Lakmé 9to5 Powerplay Priming Powder Foundation carton",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8901030995262",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "lakme-peach-milk-creme-moisturiser-pro-ceramide-peptide",
+   "name": "Peach Milk Crème Moisturiser with 2% Pro Ceramide & Peptide",
+   "brand": "lakme",
+   "category": "skin",
+   "size": "100 g",
+   "mrp": 328,
+   "price": 279,
+   "rating": 4.4,
+   "reviews": 2860,
+   "concerns": [
+    "dry"
+   ],
+   "tags": [
+    "ceramide moisturiser",
+    "peptide cream",
+    "peach milk",
+    "barrier repair cream",
+    "lakme moisturiser",
+    "face cream"
+   ],
+   "badge": "New",
+   "description": "The new Peach Milk crème adds a 2% pro-ceramide blend and peptides to support the skin barrier, alongside peach juice and sweet almond oil. It leaves skin cushiony-soft without feeling heavy.",
+   "bullets": [
+    "2% pro-ceramide complex with Ceramide NP, AP and EOP",
+    "Palmitoyl peptides in a light crème",
+    "Peach juice and sweet almond oil",
+    "24-hour moisturisation"
+   ],
+   "howToUse": "Massage a small amount onto clean face and neck morning and night until fully absorbed.",
+   "ingredients": "Water, Cyclopentasiloxane, Sorbitol, Caprylic/Capric Triglyceride, Stearic Acid, Helianthus Annuus (Sunflower) Seed Oil, Isohexadecane, Glycol Stearate, Dimethicone, Propylene Glycol, Glycerin, Butylene Glycol, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Cetyl Alcohol, Carbomer, Stearamide AMP, Prunus Persica (Peach) Juice, Prunus Amygdalus Dulcis (Sweet Almond) Fruit Extract, Sodium Lauroyl Lactylate, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Gluconolactone, Ceramide NP, Tocopherol, Phytosphingosine, Ceramide AP, Cholesterol, Sodium Sulfate, Sodium Chloride, Calcium Gluconate, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Ceramide EOP, Ethylhexylglycerin, Triethanolamine, Phenoxyethanol, Methylparaben, Titanium Dioxide, Dimethiconol, Polysorbate 80, Fragrance, Tocopheryl Acetate, Propylparaben, Xanthan Gum, Disodium EDTA, BHT, Sorbitan Oleate, Zea Mays (Corn) Starch, Citric Acid, Sodium Benzoate, Sodium Lactate, Polyglyceryl-4 Caprate, Potassium Sorbate, Polysorbate 20, Alpha-Isomethyl Ionone, Citronellol, Linalool, CI 14700.",
+   "images": [
+    {
+     "url": "/media/products/lakme/lakme-peach-milk-creme-moisturiser-pro-ceramide-peptide.webp",
+     "alt": "Lakmé Peach Milk Crème Moisturiser with 2% Pro Ceramide & Peptide jar, lid view",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8909106037861",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "the-derma-co-sali-cinamide-anti-acne-serum",
+   "name": "Sali-Cinamide Anti-Acne Serum",
+   "brand": "dermaco",
+   "category": "skin",
+   "size": "30 ml",
+   "mrp": 599,
+   "price": 509,
+   "rating": 4.2,
+   "reviews": 21340,
+   "concerns": [
+    "acne"
+   ],
+   "tags": [
+    "salicylic acid serum",
+    "niacinamide serum",
+    "acne serum",
+    "sali-cinamide",
+    "derma co serum",
+    "oily skin serum",
+    "pimple serum"
+   ],
+   "badge": "Derm pick",
+   "description": "Pairs 2% salicylic acid with 5% niacinamide to unclog pores and calm the look of breakouts and marks on oily, acne-prone skin. Willow bark, centella and alpha arbutin round out the lightweight, fragrance-free formula.",
+   "bullets": [
+    "2% salicylic acid + 5% niacinamide",
+    "Helps keep pores clear and oil in check",
+    "Fades the look of post-acne marks over time",
+    "Fragrance-free, dye-free, mineral-oil-free"
+   ],
+   "howToUse": "Apply 3-4 drops to clean, dry skin at night and let it absorb before moisturising. Start on alternate nights, and use sunscreen in the daytime.",
+   "ingredients": "Purified Water, Propanediol, Niacinamide, Ethoxydiglycol, Butylene Glycol & Rosa Canina Fruit Extract, PEG-8, Salicylic Acid, Isostearamidopropyl Ethyldimonium Ethosulfate, Sodium Hydroxide, Propylene Glycol, Olea Europaea (Olive) Fruit Oil, Carthamus Tinctorius (Safflower) Seed Oil, Glycerine, Isoamyl Laurate, Alpha Arbutin, Willow Bark Extract, Centella Asiatica Extract, Allantoin, Hydroxyethyl Cellulose, Sodium Hyaluronate, Xylitylglucoside (and) Anhydroxylitol (and) Xylitol, Triethanolamine, Phenoxyethanol (and) Ethylhexylglycerin.",
+   "images": [
+    {
+     "url": "/media/products/dermaco/the-derma-co-sali-cinamide-anti-acne-serum.webp",
+     "alt": "The Derma Co Sali-Cinamide Anti-Acne Serum carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8904417306521",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "the-derma-co-2-salicylic-acid-face-serum",
+   "name": "2% Salicylic Acid Face Serum",
+   "brand": "dermaco",
+   "category": "skin",
+   "size": "10 ml",
+   "mrp": 299,
+   "price": 254,
+   "rating": 4.1,
+   "reviews": 33610,
+   "concerns": [
+    "acne"
+   ],
+   "tags": [
+    "salicylic acid serum",
+    "bha serum",
+    "acne serum",
+    "derma co salicylic",
+    "pore serum",
+    "travel size serum"
+   ],
+   "badge": null,
+   "description": "A 2% salicylic acid serum with witch hazel and willow bark that exfoliates inside the pore to help keep blackheads and breakouts in check. The trial-size 10 ml bottle is an easy way to start a BHA routine.",
+   "bullets": [
+    "2% salicylic acid (BHA)",
+    "Witch hazel and willow bark extracts",
+    "Deep-penetration formula, day or night",
+    "Fragrance-free, dermatologically tested"
+   ],
+   "howToUse": "After cleansing, apply 2-3 drops to the face, avoiding the eye area, and follow with moisturiser. Use sunscreen during the day.",
+   "ingredients": "Aqua, 1,3-Propanediol, Ethoxydiglycol, Salicylic Acid, Glycerin, Methylpropanediol, Pentylene Glycol, Hamamelis Virginiana (Witch Hazel) Extract, Salix Alba (Willow) Bark Extract, Sodium Hyaluronate, Dimethyl Isosorbide, Sclerotium Gum, Phenoxyethanol, Tris(Tetramethylhydroxypiperidinol) Citrate, Ethylhexylglycerin, Trisodium Ethylenediamine Disuccinate, Sodium Hydroxide, PEG-40 Hydrogenated Castor Oil, Sodium Benzoate, Potassium Sorbate.",
+   "images": [
+    {
+     "url": "/media/products/dermaco/the-derma-co-2-salicylic-acid-face-serum.webp",
+     "alt": "The Derma Co 2% Salicylic Acid Face Serum carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8904417307146",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "the-derma-co-1-kojic-acid-daily-face-wash",
+   "name": "1% Kojic Acid Daily Face Wash",
+   "brand": "dermaco",
+   "category": "face",
+   "size": "150 ml",
+   "mrp": 449,
+   "price": 382,
+   "rating": 4.2,
+   "reviews": 12780,
+   "concerns": [
+    "dull",
+    "tan"
+   ],
+   "tags": [
+    "kojic acid face wash",
+    "face wash for dark spots",
+    "pigmentation face wash",
+    "alpha arbutin",
+    "niacinamide face wash",
+    "derma co face wash"
+   ],
+   "badge": null,
+   "description": "A gentle daily cleanser with 1% kojic acid, 1% niacinamide and alpha arbutin for skin that looks uneven or dull. It washes off clean without leaving skin tight.",
+   "bullets": [
+    "1% kojic acid with 1% niacinamide",
+    "Alpha arbutin for a more even-looking tone",
+    "Gentle enough for twice-daily use",
+    "Sulfate-free and paraben-free"
+   ],
+   "howToUse": "Wet the face, massage a small amount in circular motions for 30-60 seconds and rinse. Use morning and night.",
+   "ingredients": "Key ingredients: Kojic Acid (1%), Niacinamide (1%), Alpha Arbutin.",
+   "images": [
+    {
+     "url": "/media/products/dermaco/the-derma-co-1-kojic-acid-daily-face-wash.webp",
+     "alt": "The Derma Co 1% Kojic Acid Daily Face Wash tube, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8904417314755",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "the-derma-co-triple-actives-anti-dandruff-shampoo",
+   "name": "Triple Actives Anti-Dandruff Shampoo",
+   "brand": "dermaco",
+   "category": "hair",
+   "size": "200 ml",
+   "mrp": 499,
+   "price": 424,
+   "rating": 4.2,
+   "reviews": 8940,
+   "concerns": [
+    "dandruff"
+   ],
+   "tags": [
+    "anti dandruff shampoo",
+    "salicylic acid shampoo",
+    "climbazole",
+    "piroctone olamine",
+    "itchy scalp",
+    "derma co shampoo"
+   ],
+   "badge": null,
+   "description": "Combines 2% salicylic acid, 1% climbazole and 1% piroctone olamine to lift visible flakes and keep the scalp feeling fresh and comfortable. The sulphate-free base also has rosemary, sage and aloe.",
+   "bullets": [
+    "Three actives: salicylic acid, climbazole, piroctone olamine",
+    "Helps reduce visible flakes and itchiness",
+    "Sulphate-free, gentle on hair",
+    "Cooling menthol and peppermint finish"
+   ],
+   "howToUse": "Massage into a wet scalp, leave for 2-3 minutes so the actives can work, then rinse. Use 2-3 times a week.",
+   "ingredients": "Aqua, Sodium Cocoyl Isethionate, Cocamidopropyl Betaine, Dimethiconol, Sodium Lauroyl Methyl Isethionate, TEA-Dodecylbenzenesulfonate, Salicylic Acid, Glycerin, Piroctone Olamine, Climbazole, 1,3-Propanediol, Panthenol, Polyquaternium-10, Polyquaternium-7, Polyquaternium-73, Amodimethicone, Cetrimonium Chloride, Rosmarinus Officinalis (Rosemary) Extract, Salvia Officinalis (Sage) Extract, Aloe Barbadensis Leaf Extract, Sodium PCA, Sodium Stearate, Stearamidopropyl Dimethylamine, Sodium Benzoate, Mica, Acrylates Copolymer, Trisodium Ethylenediamine Disuccinate, Titanium Dioxide, Phenoxyethanol, Menthol, Mentha Piperita Oil, Sodium Hydroxide, Sodium Chloride, PEG-45M, Citric Acid.",
+   "images": [
+    {
+     "url": "/media/products/dermaco/the-derma-co-triple-actives-anti-dandruff-shampoo.webp",
+     "alt": "The Derma Co Triple Actives Anti-Dandruff Shampoo bottle, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8904417322989",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "the-derma-co-1-salicylic-acid-gel-daily-face-wash",
+   "name": "1% Salicylic Acid Gel Daily Face Wash",
+   "brand": "dermaco",
+   "category": "face",
+   "size": "100 ml",
+   "mrp": 349,
+   "price": 299,
+   "rating": 4.2,
+   "reviews": 29470,
+   "concerns": [
+    "acne"
+   ],
+   "tags": [
+    "salicylic acid face wash",
+    "acne face wash",
+    "gel face wash",
+    "oily skin face wash",
+    "witch hazel",
+    "derma co face wash"
+   ],
+   "badge": null,
+   "description": "A clear gel cleanser with 1% salicylic acid, witch hazel and willow bark that clears away excess oil and helps keep pores unclogged. Mild enough for daily use on oily and acne-prone skin.",
+   "bullets": [
+    "1% salicylic acid gel",
+    "Witch hazel and willow bark",
+    "Removes excess oil without stripping",
+    "Sulfate-free and paraben-free, day and night"
+   ],
+   "howToUse": "Massage a small amount onto damp skin for about a minute, then rinse well. Use twice a day.",
+   "ingredients": "Aqua, Sodium Alpha Olefin Sulfonate, Cocamidopropyl Betaine, Glycerin, Cocamide MEA, Sodium Lactate, Salicylic Acid, Salix Alba (Willow) Bark Extract, Hamamelis Virginiana (Witch Hazel) Extract, Coco-Glucoside, Glyceryl Oleate, PEG-120 Methyl Glucose Dioleate, Sodium Chloride, Phenoxyethanol, Triethylene Glycol, Disodium EDTA.",
+   "images": [
+    {
+     "url": "/media/products/dermaco/the-derma-co-1-salicylic-acid-gel-daily-face-wash.webp",
+     "alt": "The Derma Co 1% Salicylic Acid Gel Daily Face Wash tube, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906087775645",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "minimalist-vitamin-b5-10-oil-free-moisturizer",
+   "name": "Vitamin B5 10% Oil-Free Moisturizer",
+   "brand": "minimalist",
+   "category": "skin",
+   "size": "50 g",
+   "mrp": 349,
+   "price": 331,
+   "rating": 4.3,
+   "reviews": 27690,
+   "concerns": [
+    "dry",
+    "acne"
+   ],
+   "tags": [
+    "oil free moisturizer",
+    "vitamin b5",
+    "panthenol",
+    "moisturizer for oily skin",
+    "minimalist moisturizer",
+    "lightweight moisturizer"
+   ],
+   "badge": "Bestseller",
+   "description": "A lightweight, oil-free gel-cream with 10% vitamin B5 (panthenol), copper, zinc and magnesium plus hyaluronic acid and betaine. It hydrates and soothes oily and combination skin without clogging or leaving shine.",
+   "bullets": [
+    "10% vitamin B5 (panthenol)",
+    "Copper, zinc and magnesium gluconates",
+    "Hyaluronic acid and betaine for hydration",
+    "Oil-free, non-comedogenic feel"
+   ],
+   "howToUse": "Apply a pea-sized amount to clean face and neck morning and night. Follow with sunscreen in the daytime.",
+   "ingredients": "Water/Aqua, Panthenol, Cyclopentasiloxane, Dimethicone Crosspolymer, Glycerin, Xylitylglucoside, Anhydroxylitol, Xylitol, PEG/PPG-18/18 Dimethicone, Hydrogenated Polyisobutene, Magnesium Aspartate, Zinc Gluconate, Copper Gluconate, Sodium Hyaluronate, Betaine, Phenoxyethanol, Pentylene Glycol, Allantoin, Ethylhexylglycerin, Carbomer, Magnesium Sulfate Heptahydrate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer.",
+   "images": [
+    {
+     "url": "/media/products/minimalist/minimalist-vitamin-b5-10-oil-free-moisturizer.webp",
+     "alt": "Minimalist Vitamin B5 10% Moisturizer carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906128100443",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "minimalist-salicylic-acid-lha-2-body-wash",
+   "name": "Salicylic Acid + LHA 2% Body Wash",
+   "brand": "minimalist",
+   "category": "body",
+   "size": "200 ml",
+   "mrp": 399,
+   "price": 379,
+   "rating": 4.2,
+   "reviews": 9310,
+   "concerns": [
+    "acne"
+   ],
+   "tags": [
+    "body wash",
+    "salicylic acid body wash",
+    "body acne",
+    "lha",
+    "exfoliating body wash",
+    "minimalist body wash"
+   ],
+   "badge": null,
+   "description": "A gently exfoliating body wash with salicylic acid and LHA (capryloyl salicylic acid) for bumpy, congested skin on the back, chest and arms. Niacinamide, betaine and glycerin help it rinse off without dryness.",
+   "bullets": [
+    "2% salicylic acid + LHA blend",
+    "Helps smooth rough, bumpy skin",
+    "Niacinamide, betaine and glycerin",
+    "Mild, sulphate-free cleansers"
+   ],
+   "howToUse": "Lather onto wet skin, leave for a minute on problem areas, then rinse. Use daily or on alternate days.",
+   "ingredients": "Water/Aqua, Sodium Lauroyl Sarcosinate, Coco-Glucoside, Cocamidopropyl Betaine, Acrylates Copolymer, Acrylates Crosspolymer-4, Glycerin, Sodium Lauroamphoacetate, Salicylic Acid, Capryloyl Salicylic Acid, Sodium PCA, Betaine, Niacinamide, Phenoxyethanol, Ethylhexylglycerin, Sodium Hydroxide, Trisodium Ethylenediamine Disuccinate.",
+   "images": [
+    {
+     "url": "/media/products/minimalist/minimalist-salicylic-acid-lha-2-body-wash.webp",
+     "alt": "Minimalist Salicylic Acid + LHA 2% Body Wash carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906128100818",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "minimalist-maleic-bond-repair-complex-5-hair-serum",
+   "name": "Maleic Bond Repair Complex 5% Hair Serum",
+   "brand": "minimalist",
+   "category": "hair",
+   "size": "50 ml",
+   "mrp": 699,
+   "price": 664,
+   "rating": 4.1,
+   "reviews": 4120,
+   "concerns": [
+    "frizz"
+   ],
+   "tags": [
+    "hair serum",
+    "bond repair",
+    "damaged hair",
+    "frizz control",
+    "argan oil serum",
+    "minimalist hair serum"
+   ],
+   "badge": "New",
+   "description": "A leave-in hair serum with a 5% maleic acid bond-repair complex, amino acids, argan oil and squalane for hair stressed by colour, heat or straightening. It smooths frizz and leaves lengths softer and shinier.",
+   "bullets": [
+    "5% maleic bond repair complex",
+    "Amino acids, argan oil and squalane",
+    "Smooths frizz and adds shine",
+    "Suits all hair types"
+   ],
+   "howToUse": "Work 2-3 pumps through damp or dry lengths and ends, avoiding the scalp. Style as usual; no need to rinse.",
+   "ingredients": "Key ingredients: Maleic Bond Repair Complex (5%), Amino Acids, Argania Spinosa (Argan) Kernel Oil, Squalane.",
+   "images": [
+    {
+     "url": "/media/products/minimalist/minimalist-maleic-bond-repair-complex-5-hair-serum.webp",
+     "alt": "Minimalist Maleic Bond Repair Complex 5% Hair Serum carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906128100788",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "beardo-whisky-smoke-perfume-body-spray",
+   "name": "Whisky Smoke Perfume Body Spray",
+   "brand": "beardo",
+   "category": "fragrance",
+   "size": "120 ml",
+   "mrp": 349,
+   "price": 279,
+   "rating": 4.1,
+   "reviews": 16480,
+   "concerns": [],
+   "tags": [
+    "perfume for men",
+    "body spray",
+    "deodorant",
+    "whisky smoke",
+    "no gas perfume",
+    "beardo perfume",
+    "long lasting"
+   ],
+   "badge": null,
+   "description": "A no-gas perfume body spray with a warm, smoky whisky-and-wood character built for evenings out. The concentrated formula gives more sprays per can and a longer-lasting trail than regular deodorants.",
+   "bullets": [
+    "Smoky, woody whisky accord",
+    "No-gas formula: pure perfume in every spray",
+    "Long-lasting fragrance",
+    "120 ml for daily use"
+   ],
+   "howToUse": "Hold 15 cm away and spray on the neck, chest and wrists. Avoid spraying on broken skin or close to the eyes.",
+   "ingredients": "Ethyl Alcohol Denat, Water, Fragrance, Diethyl Phthalate, Propylene Glycol, Triclosan.",
+   "images": [
+    {
+     "url": "/media/products/beardo/beardo-whisky-smoke-perfume-body-spray.webp",
+     "alt": "Beardo Whisky Smoke Perfume Body Spray carton, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906084795653",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  },
+  {
+   "slug": "beardo-de-tan-coffee-detox-face-wash-200ml",
+   "name": "De-Tan Coffee Detox Face Wash for Men",
+   "brand": "beardo",
+   "category": "men",
+   "size": "200 ml",
+   "mrp": 449,
+   "price": 359,
+   "rating": 4.2,
+   "reviews": 11920,
+   "concerns": [
+    "tan",
+    "dull"
+   ],
+   "tags": [
+    "face wash for men",
+    "de tan face wash",
+    "coffee face wash",
+    "beardo face wash",
+    "men's skincare",
+    "tan removal",
+    "value pack"
+   ],
+   "badge": null,
+   "description": "Beardo's coffee face wash in a 200 ml value bottle, powered by a 4% complex of glycolic acid, lactic acid and niacinamide. It lifts away sweat, grime and the dull look that comes with sun exposure, leaving skin fresher after every wash.",
+   "bullets": [
+    "4% complex: glycolic acid, lactic acid, niacinamide",
+    "Coffee bean extract for an energising wash",
+    "Ceramides and hyaluronate to avoid dryness",
+    "Bigger 200 ml bottle"
+   ],
+   "howToUse": "Wet your face, work a coin-sized amount into a lather and massage for 30 seconds before rinsing. Use twice a day.",
+   "ingredients": "Aqua (and) Sodium Laureth Sulfate (and) Cocamide MEA (and) Cocamidopropyl Betaine (and) Glycol Distearate (and) Sodium Chloride, Acrylates Copolymer, Salicylic Acid, Niacinamide (Vitamin B3), Ceramide 1, Ceramide 3, Ceramide 6-II, Butylene Glycol, Hydrogenated Lecithin, Caprylic/Capric Triglyceride, Polyglyceryl-10 Esters, Pentylene Glycol, Coffea Arabica (Coffee) Bean Extract, Aloe Barbadensis (Aloe Vera) Extract, Glycolic Acid, Lactic Acid, Lotus Corniculatus Seed Extract, Sodium Hyaluronate, Perfume, DMDM Hydantoin, Sodium Chloride, Tocopheryl Acetate (Vitamin E), Alpha Arbutin, Sodium Benzoate, Methylisothiazolinone, CI 14720, CI 42090.",
+   "images": [
+    {
+     "url": "/media/products/beardo/beardo-de-tan-coffee-detox-face-wash-200ml.webp",
+     "alt": "Beardo De-Tan Face Wash Coffee Detox 200 ml bottle, front",
+     "width": 1000,
+     "height": 1250,
+     "source": "Open Beauty Facts",
+     "sourceUrl": "https://world.openbeautyfacts.org/product/8906084796360",
+     "license": "CC BY-SA 3.0",
+     "attribution": "Open Beauty Facts contributors"
+    }
+   ]
+  }
+ ],
+ "demoImages": {
+  "lakme-ss": [
+   {
+    "url": "/media/products/lakme/lakme-sun-expert-spf-50-pa-ultra-matte-gel.webp",
+    "alt": "Lakmé 9to5 Sun Expert Super Matte SPF 50 sunscreen tube, front of pack",
+    "width": 1000,
+    "height": 1250,
+    "source": "Open Beauty Facts",
+    "sourceUrl": "https://world.openbeautyfacts.org/product/8901030978784",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Open Beauty Facts contributors"
+   }
+  ],
+  "derma-sal": [
+   {
+    "url": "/media/products/dermaco/the-derma-co-2-salicylic-acid-foaming-face-wash.webp",
+    "alt": "The Derma Co Sali-Cinamide Anti-Acne Face Wash with 2% salicylic acid, 80 ml tube, front",
+    "width": 1000,
+    "height": 1250,
+    "source": "Open Beauty Facts",
+    "sourceUrl": "https://world.openbeautyfacts.org/product/8904417306576",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Open Beauty Facts contributors"
+   }
+  ]
+ }
+}

@@ -1,0 +1,539 @@
+[
+ {
+  "key": "L1",
+  "src": "07102442__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-peach-milk-soft-creme-moisturiser"
+ },
+ {
+  "key": "L2",
+  "src": "8901030640575__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-absolute-argan-oil-serum-foundation-spf-45",
+  "rotate": -60.6
+ },
+ {
+  "key": "L3",
+  "src": "8901030712050__r3.jpg",
+  "brand": "lakme",
+  "slug": "peach-milk-moisturiser",
+  "skip": true
+ },
+ {
+  "key": "L4",
+  "src": "8901030864568__r1.jpg",
+  "brand": "lakme",
+  "slug": "blush-and-glow-lemon-sheet-mask",
+  "skip": true
+ },
+ {
+  "key": "L5",
+  "src": "8901030865275__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-peach-milk-ultra-light-gel-moisturiser",
+  "polys": [
+   {
+    "ellipse": [
+     0.49,
+     0.455,
+     0.495,
+     0.265
+    ]
+   }
+  ]
+ },
+ {
+  "key": "L6",
+  "src": "8901030974380__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-peach-milk-vit-e-spf-24-moisture-riser-lotion"
+ },
+ {
+  "key": "L7",
+  "src": "8901030977657__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-peach-milk-vit-e-creme-moisture-riser",
+  "polys": [
+   {
+    "ellipse": [
+     0.475,
+     0.553,
+     0.475,
+     0.35
+    ]
+   }
+  ]
+ },
+ {
+  "key": "L8",
+  "src": "8901030978036__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-9to5-cc-cream-spf-30"
+ },
+ {
+  "key": "L9",
+  "src": "8901030978609__front_en.jpg",
+  "brand": "lakme",
+  "slug": "9to5-sun-expert-super-matte-spf-50-50ml",
+  "skip": true
+ },
+ {
+  "key": "L10",
+  "src": "8901030978630__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-9to5-sun-expert-tint-hint-sunscreen-spf-50"
+ },
+ {
+  "key": "L11",
+  "src": "8901030978753__front_en.jpg",
+  "brand": "lakme",
+  "slug": "9to5-sun-expert-super-matte-spf-25",
+  "skip": true
+ },
+ {
+  "key": "L12",
+  "src": "8901030978784__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-sun-expert-spf-50-pa-ultra-matte-gel"
+ },
+ {
+  "key": "L13",
+  "src": "8901030994777__front_en.jpg",
+  "brand": "lakme",
+  "slug": "blush-and-glow-strawberry-face-wash",
+  "skip": true
+ },
+ {
+  "key": "L14",
+  "src": "8901030995262__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-9to5-powerplay-priming-powder-foundation"
+ },
+ {
+  "key": "L15",
+  "src": "8909106025011__front_en.jpg",
+  "brand": "lakme",
+  "slug": "perfect-radiance-niacinamide-face-wash",
+  "skip": true
+ },
+ {
+  "key": "L16",
+  "src": "8909106026469__front_en.jpg",
+  "brand": "lakme",
+  "slug": "9to5-sun-expert-gel-sunscreen-spf-50",
+  "skip": true
+ },
+ {
+  "key": "L17",
+  "src": "8909106037861__front_en.jpg",
+  "brand": "lakme",
+  "slug": "lakme-peach-milk-creme-moisturiser-pro-ceramide-peptide",
+  "polys": [
+   {
+    "ellipse": [
+     0.455,
+     0.522,
+     0.285,
+     0.212
+    ]
+   }
+  ]
+ },
+ {
+  "key": "L18",
+  "src": "8909106050792__front_en.jpg",
+  "brand": "lakme",
+  "slug": "9to5-cc-plus-complexion-care-cream",
+  "skip": true
+ },
+ {
+  "key": "L19",
+  "src": "8901030764806__r4.jpg",
+  "brand": "lakme",
+  "slug": "sun-expert-ultra-matte-lotion-spf-24",
+  "skip": true
+ },
+ {
+  "key": "L20",
+  "src": "8909106036895__front_en.jpg",
+  "brand": "lakme",
+  "slug": "peach-milk-sunscreen-moisturiser-spf-30",
+  "skip": true
+ },
+ {
+  "key": "L21",
+  "src": "8909106077119__front_en.jpg",
+  "brand": "lakme",
+  "slug": "9to5-sun-expert-tinted-matte-sunscreen",
+  "skip": true
+ },
+ {
+  "key": "D1",
+  "src": "6187611477866__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "hyaluronic-sunscreen-aqua-gel-box",
+  "skip": true
+ },
+ {
+  "key": "D2",
+  "src": "8904417306248__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "kojic-acid-daily-face-wash-100ml",
+  "skip": true
+ },
+ {
+  "key": "D3",
+  "src": "8904417306521__r1.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-sali-cinamide-anti-acne-serum"
+ },
+ {
+  "key": "D4",
+  "src": "8904417306576__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-2-salicylic-acid-foaming-face-wash",
+  "cut": [
+   [
+    [
+     0.827,
+     0.46
+    ],
+    [
+     0.99,
+     0.46
+    ],
+    [
+     0.99,
+     0.61
+    ],
+    [
+     0.806,
+     0.61
+    ],
+    [
+     0.809,
+     0.58
+    ],
+    [
+     0.814,
+     0.55
+    ],
+    [
+     0.824,
+     0.5
+    ]
+   ]
+  ]
+ },
+ {
+  "key": "D5",
+  "src": "8904417307146__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-2-salicylic-acid-face-serum",
+  "polys": [
+   [
+    [
+     0.262,
+     0.07
+    ],
+    [
+     0.775,
+     0.065
+    ],
+    [
+     0.79,
+     0.805
+    ],
+    [
+     0.262,
+     0.805
+    ]
+   ]
+  ]
+ },
+ {
+  "key": "D6",
+  "src": "8906087775713__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "1-hyaluronic-sunscreen-aqua-gel-spf-50",
+  "skip": true
+ },
+ {
+  "key": "D7",
+  "src": "8904417314755__r1.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-1-kojic-acid-daily-face-wash"
+ },
+ {
+  "key": "D8",
+  "src": "8904417317282__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "peptide-stem-cell-hair-fall-control-shampoo",
+  "skip": true
+ },
+ {
+  "key": "D9",
+  "src": "8904417322989__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-triple-actives-anti-dandruff-shampoo"
+ },
+ {
+  "key": "D10",
+  "src": "8904417325225__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "5-nia-ceramide-mattifying-moisturizer",
+  "skip": true
+ },
+ {
+  "key": "D11",
+  "src": "8906087775645__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "the-derma-co-1-salicylic-acid-gel-daily-face-wash",
+  "polys": [
+   [
+    [
+     0.045,
+     0.04
+    ],
+    [
+     0.995,
+     0.04
+    ],
+    [
+     0.995,
+     0.99
+    ],
+    [
+     0.315,
+     0.99
+    ],
+    [
+     0.31,
+     0.975
+    ],
+    [
+     0.283,
+     0.9
+    ],
+    [
+     0.258,
+     0.8
+    ],
+    [
+     0.235,
+     0.7
+    ],
+    [
+     0.212,
+     0.62
+    ],
+    [
+     0.207,
+     0.55
+    ],
+    [
+     0.198,
+     0.47
+    ],
+    [
+     0.172,
+     0.4
+    ],
+    [
+     0.142,
+     0.3
+    ],
+    [
+     0.125,
+     0.25
+    ],
+    [
+     0.09,
+     0.18
+    ],
+    [
+     0.05,
+     0.1
+    ]
+   ]
+  ]
+ },
+ {
+  "key": "D12",
+  "src": "8906087776024__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "1-salicylic-acid-oil-free-face-moisturizer",
+  "skip": true
+ },
+ {
+  "key": "D13",
+  "src": "8906087779292__front_en.jpg",
+  "brand": "dermaco",
+  "slug": "oil-free-daily-face-moisturizer",
+  "skip": true
+ },
+ {
+  "key": "D14",
+  "src": "8906087776604__r4.jpg",
+  "brand": "dermaco",
+  "slug": "2-kojic-acid-face-serum",
+  "skip": true
+ },
+ {
+  "key": "M1",
+  "src": "8906128100443__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "minimalist-vitamin-b5-10-oil-free-moisturizer",
+  "polys": [
+   [
+    [
+     0.15,
+     0.09
+    ],
+    [
+     0.89,
+     0.085
+    ],
+    [
+     0.876,
+     0.952
+    ],
+    [
+     0.162,
+     0.954
+    ]
+   ]
+  ]
+ },
+ {
+  "key": "M2",
+  "src": "8906128100818__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "minimalist-salicylic-acid-lha-2-body-wash"
+ },
+ {
+  "key": "M3",
+  "src": "8906128100788__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "minimalist-maleic-bond-repair-complex-5-hair-serum"
+ },
+ {
+  "key": "M4",
+  "src": "8906128101105__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "retinol-0-3-face-serum",
+  "polys": [
+   [
+    [
+     0.357,
+     0.302
+    ],
+    [
+     0.522,
+     0.308
+    ],
+    [
+     0.506,
+     0.842
+    ],
+    [
+     0.316,
+     0.836
+    ]
+   ]
+  ],
+  "skip": true
+ },
+ {
+  "key": "M5",
+  "src": "8906128101204__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "light-fluid-sunscreen-spf-50",
+  "polys": [
+   [
+    [
+     0.285,
+     0.045
+    ],
+    [
+     0.69,
+     0.04
+    ],
+    [
+     0.675,
+     0.2
+    ],
+    [
+     0.66,
+     0.4
+    ],
+    [
+     0.645,
+     0.6
+    ],
+    [
+     0.638,
+     0.7
+    ],
+    [
+     0.645,
+     0.8
+    ],
+    [
+     0.415,
+     0.8
+    ],
+    [
+     0.405,
+     0.7
+    ],
+    [
+     0.395,
+     0.6
+    ],
+    [
+     0.37,
+     0.4
+    ],
+    [
+     0.33,
+     0.2
+    ]
+   ]
+  ],
+  "skip": true
+ },
+ {
+  "key": "M6",
+  "src": "8906128100320__front_en.jpg",
+  "brand": "minimalist",
+  "slug": "salicylic-acid-2-face-serum",
+  "skip": true
+ },
+ {
+  "key": "B1",
+  "src": "8906084795653__front_en.jpg",
+  "brand": "beardo",
+  "slug": "beardo-whisky-smoke-perfume-body-spray"
+ },
+ {
+  "key": "B2",
+  "src": "8906084796360__front_en.jpg",
+  "brand": "beardo",
+  "slug": "beardo-de-tan-coffee-detox-face-wash-200ml"
+ },
+ {
+  "key": "B3",
+  "src": "8906084790955__front_en.jpg",
+  "brand": "beardo",
+  "slug": "de-tan-face-wash",
+  "skip": true
+ },
+ {
+  "key": "B4",
+  "src": "8906084798012__front_en.jpg",
+  "brand": "beardo",
+  "slug": "legendary-7-perfume-gift-set",
+  "skip": true
+ }
+]
