@@ -1,0 +1,12 @@
+import { db } from "@/lib/db";
+import { route } from "@/lib/api";
+
+/** GET /api/v1/auth/me — the signed-in user (null when signed out), plus seller status if any. */
+export const GET = route({ auth: "public" }, async ({ auth }) => {
+  if (!auth) return { user: null };
+  const seller =
+    auth.user.role === "SELLER"
+      ? await db.seller.findUnique({ where: { userId: auth.user.id }, select: { id: true, slug: true, status: true, displayName: true } })
+      : null;
+  return { user: auth.user, seller };
+});
