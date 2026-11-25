@@ -187,11 +187,14 @@ export async function requireAdminPage(nextPath = "/admin"): Promise<AuthContext
 }
 
 export async function requireSellerPage(nextPath = "/seller"): Promise<AuthContext & { seller: Seller }> {
+  // On seller.<domain> the portal lives at the root ("/login"); on the main domain it is under "/seller".
+  const host = ((await headers()).get("host") ?? "").toLowerCase();
+  const p = host.startsWith("seller.") ? "" : "/seller";
   const auth = await getAuth();
-  if (!auth) redirect(`/seller/login?next=${encodeURIComponent(nextPath)}`);
+  if (!auth) redirect(`${p}/login?next=${encodeURIComponent(nextPath)}`);
   const seller = await db.seller.findUnique({ where: { userId: auth.user.id } });
-  if (!seller) redirect("/seller/register");
-  if (seller.status !== "APPROVED") redirect("/seller/status");
+  if (!seller) redirect(`${p}/register`);
+  if (seller.status !== "APPROVED") redirect(`${p}/status`);
   return { ...auth, seller };
 }
 

@@ -65,8 +65,25 @@ const as = opt("as", null);
 if (as) {
   const acct = ACCOUNTS[as];
   if (!acct) throw new Error(`unknown --as=${as}`);
-  const res = await context.request.post(`${base}/api/v1/auth/login`, { data: acct });
-  if (!res.ok()) console.log(`login as ${as} failed: ${res.status()} ${(await res.text()).slice(0, 200)}`);
+  // Reuse a saved session per account+host (avoids the login rate limit when many runs happen in parallel)
+  const { readFileSync, writeFileSync, existsSync } = await import("node:fs");
+  const sessDir = path.resolve(".shots/.sessions");
+  mkdirSync(sessDir, { recursive: true });
+  const sessFile = path.join(sessDir, `${as}-${new URL(base).host.replace(/[^a-z0-9.-]/gi, "_")}.json`);
+  let reused = false;
+  if (existsSync(sessFile)) {
+    try {
+      await context.addCookies(JSON.parse(readFileSync(sessFile, "utf8")));
+      const me = await context.request.get(`${base}/api/v1/auth/me`);
+      reused = me.ok() && Boolean((await me.json())?.data?.user);
+    } catch { reused = false; }
+    if (!reused) await context.clearCookies();
+  }
+  if (!reused) {
+    const res = await context.request.post(`${base}/api/v1/auth/login`, { data: acct });
+    if (!res.ok()) console.log(`login as ${as} failed: ${res.status()} ${(await res.text()).slice(0, 200)}`);
+    else writeFileSync(sessFile, JSON.stringify(await context.cookies()));
+  }
 }
 
 let status = null;

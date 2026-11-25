@@ -41,6 +41,15 @@ export async function proxy(req: NextRequest) {
   let rewritten = false;
 
   // 1) host routing
+  // Store-only pages requested on seller.* (e.g. a "Sell on TBB" link) belong to the main storefront.
+  const STORE_ONLY = /^\/(sell|p|s|c|cart|checkout|brand|brands|deals|gifts|account|advertise|order|credits|about|kit)(\/|$)/;
+  if (sub === "seller" && STORE_ONLY.test(pathname)) {
+    const rootHost = process.env.ROOT_DOMAIN ?? (req.headers.get("host") ?? "").replace(/^seller\./, "");
+    // Raw Location header: NextResponse.redirect would shorten a "same-origin" URL to a relative path,
+    // which the browser would resolve back onto seller.* — the host must stay explicit.
+    const target = new URL(`${pathname}${req.nextUrl.search}`, `${req.nextUrl.protocol}//${rootHost}`).toString();
+    return new NextResponse(null, { status: 307, headers: { Location: target } });
+  }
   if (sub === "seller" && !pathname.startsWith("/seller")) {
     pathname = pathname === "/" ? "/seller" : `/seller${pathname}`;
     rewritten = true;
