@@ -25,8 +25,10 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ id: string 
     console.error("[ads] click failed", e);
     if (to && isSafeRelativePath(to)) dest = to;
   }
-  const url = /^https:\/\//i.test(dest) ? dest : new URL(dest, req.nextUrl.origin).toString();
-  const res = NextResponse.redirect(url, 302);
+  // Same-site destinations go out as a RELATIVE Location: behind a reverse proxy (Caddy → 127.0.0.1:3002)
+  // req.nextUrl.origin is the internal address (localhost:3002), which would send shoppers off the site.
+  // The browser resolves a relative Location against the page's real address.
+  const res = new NextResponse(null, { status: 302, headers: { Location: dest } });
   res.headers.set("cache-control", "no-store");
   res.headers.set("x-robots-tag", "noindex, nofollow");
   res.headers.set("referrer-policy", "strict-origin-when-cross-origin");
