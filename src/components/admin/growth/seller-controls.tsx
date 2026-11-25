@@ -112,7 +112,7 @@ export function CommissionEditor({ id, value, canEdit }: { id: string; value: nu
       }}
     >
       <NumberField label="Commission" suffix="%" min={0} max={60} step={0.5} value={v} onChange={(x) => { setV(x); setErr(undefined); }} error={fieldError} />
-      <button type="submit" className="btn btn-dark btn-sm" disabled={busy || v === value} style={{ marginBottom: fieldError ? 22 : 2 }}>
+      <button type="submit" className="btn btn-dark btn-sm" disabled={busy || v === value} aria-busy={busy || undefined} style={{ marginBottom: fieldError ? 22 : 2 }}>
         {busy ? "Saving…" : "Save"}
       </button>
     </form>

@@ -17,7 +17,12 @@ export const site = {
 
 /** Cookie names (shared by server code, route handlers and proxy). */
 export const COOKIES = {
+  /** storefront (customer) session */
   session: "tbb_session",
+  /** seller portal session — separate, so signing in on the store never signs you in to the portal */
+  sellerSession: "tbb_seller_session",
+  /** admin console session */
+  adminSession: "tbb_admin_session",
   cart: "tbb_cart",
   inspector: "tbb_inspect",
 } as const;

@@ -833,3 +833,21 @@ model Subscriber {
   email     String   @unique
   createdAt DateTime @default(now())
 }
+
+/// Messages from the public /contact page (customers, brands, press). Handled in /admin/messages.
+model ContactMessage {
+  id          String   @id @default(cuid())
+  topic       String   // "order" | "return" | "payment" | "product" | "account" | "brand" | "other"
+  name        String
+  email       String
+  phone       String?
+  orderNumber String?
+  message     String
+  status      String   @default("NEW") // NEW | REPLIED | CLOSED
+  userId      String?
+  ip          String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([status, createdAt])
+}

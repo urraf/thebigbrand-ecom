@@ -12,7 +12,11 @@ import { COOKIES } from "@/lib/site";
 /**
  * AUTH MODEL
  * - Stateless JWT (HS256) carrying { sub: userId, role, sid } + a Session row for revocation/logout.
- * - Web: httpOnly cookie `tbb_session`. Mobile apps (later): `Authorization: Bearer <token>`.
+ * - Web: one httpOnly cookie PER AREA, so the three areas never share a sign-in:
+ *     store → `tbb_session`, seller portal → `tbb_seller_session`, admin console → `tbb_admin_session`.
+ *   API requests pick the area from the path (/api/v1/admin/* → admin, /api/v1/seller/* → seller, else store),
+ *   or from the `x-tbb-scope` header that the seller/admin screens send when they call shared endpoints.
+ * - Mobile apps (later): `Authorization: Bearer <token>` (takes precedence over cookies).
  * - Roles: CUSTOMER, SELLER, STAFF, ADMIN. Admin console = ADMIN | STAFF. Seller portal = SELLER with an APPROVED Seller.
  */
 
@@ -32,6 +36,23 @@ export type AuthUser = {
 export type AuthContext = { user: AuthUser; sessionId: string };
 
 export const ADMIN_ROLES: Role[] = ["ADMIN", "STAFF"];
+
+/** Which area a sign-in belongs to. Each has its own cookie. */
+export type AuthScope = "store" | "seller" | "admin";
+export const SCOPE_COOKIE: Record<AuthScope, string> = { store: COOKIES.session, seller: COOKIES.sellerSession, admin: COOKIES.adminSession };
+export const SCOPE_HEADER = "x-tbb-scope";
+
+const isScope = (v: unknown): v is AuthScope => v === "store" || v === "seller" || v === "admin";
+
+/** Area for an API request: explicit `x-tbb-scope` header, else by path. */
+export function requestScope(req: NextRequest | Request): AuthScope {
+  const h = req.headers.get(SCOPE_HEADER);
+  if (isScope(h)) return h;
+  const path = new URL(req.url).pathname;
+  if (path.startsWith("/api/v1/admin/") || path === "/api/v1/admin") return "admin";
+  if (path.startsWith("/api/v1/seller/") || path === "/api/v1/seller") return "seller";
+  return "store";
+}
 
 // ───────────── passwords ─────────────
 
@@ -112,33 +133,36 @@ const cookieOptions = () => ({
   maxAge: SESSION_MAX_AGE,
 });
 
-/** For Route Handlers: attach the session cookie to a response. */
-export function setSessionCookieOn(res: NextResponse, token: string) {
-  res.cookies.set(COOKIES.session, token, cookieOptions());
+/** For Route Handlers: attach the session cookie of `scope` to a response. */
+export function setSessionCookieOn(res: NextResponse, token: string, scope: AuthScope = "store") {
+  res.cookies.set(SCOPE_COOKIE[scope], token, cookieOptions());
   return res;
 }
 
-export function clearSessionCookieOn(res: NextResponse) {
-  res.cookies.set(COOKIES.session, "", { ...cookieOptions(), maxAge: 0 });
+export function clearSessionCookieOn(res: NextResponse, scope: AuthScope = "store") {
+  res.cookies.set(SCOPE_COOKIE[scope], "", { ...cookieOptions(), maxAge: 0 });
   return res;
 }
 
 /** For Server Actions: set/clear the cookie via next/headers. */
-export async function setSessionCookie(token: string) {
-  (await cookies()).set(COOKIES.session, token, cookieOptions());
+export async function setSessionCookie(token: string, scope: AuthScope = "store") {
+  (await cookies()).set(SCOPE_COOKIE[scope], token, cookieOptions());
 }
 
-export async function clearSessionCookie() {
-  (await cookies()).set(COOKIES.session, "", { ...cookieOptions(), maxAge: 0 });
+export async function clearSessionCookie(scope: AuthScope = "store") {
+  (await cookies()).set(SCOPE_COOKIE[scope], "", { ...cookieOptions(), maxAge: 0 });
 }
 
 // ───────────── reading the current user ─────────────
 
-/** Server Components / Server Actions. Memoised per request. Dynamic (reads cookies) → wrap callers in <Suspense>. */
-export const getAuth = cache(async (): Promise<AuthContext | null> => {
+/**
+ * Server Components / Server Actions: the signed-in user of one area (default: the store).
+ * Memoised per request and scope. Dynamic (reads cookies) → wrap callers in <Suspense>.
+ */
+export const getAuth = cache(async (scope: AuthScope = "store"): Promise<AuthContext | null> => {
   await connection(); // request-time only (JWT expiry check reads the clock)
   const jar = await cookies();
-  let token = jar.get(COOKIES.session)?.value;
+  let token = jar.get(SCOPE_COOKIE[scope])?.value;
   if (!token) {
     const authz = (await headers()).get("authorization");
     if (authz?.startsWith("Bearer ")) token = authz.slice(7);
@@ -146,17 +170,18 @@ export const getAuth = cache(async (): Promise<AuthContext | null> => {
   return resolveClaims(await verifySessionToken(token));
 });
 
-/** Route Handlers: supports both the cookie and `Authorization: Bearer`. */
-export async function getAuthFromRequest(req: NextRequest | Request): Promise<AuthContext | null> {
+/** Route Handlers: `Authorization: Bearer`, else the cookie of the request's area (see requestScope). */
+export async function getAuthFromRequest(req: NextRequest | Request, scope: AuthScope = requestScope(req)): Promise<AuthContext | null> {
   const authz = req.headers.get("authorization");
+  const name = SCOPE_COOKIE[scope];
   let token: string | undefined;
   if (authz?.startsWith("Bearer ")) token = authz.slice(7);
   if (!token && "cookies" in req && typeof (req as NextRequest).cookies?.get === "function") {
-    token = (req as NextRequest).cookies.get(COOKIES.session)?.value;
+    token = (req as NextRequest).cookies.get(name)?.value;
   }
   if (!token) {
     const raw = req.headers.get("cookie") ?? "";
-    const m = raw.match(new RegExp(`(?:^|;\\s*)${COOKIES.session}=([^;]+)`));
+    const m = raw.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
     token = m ? decodeURIComponent(m[1]) : undefined;
   }
   return resolveClaims(await verifySessionToken(token));
@@ -181,7 +206,7 @@ export async function requireUserPage(nextPath = "/account"): Promise<AuthContex
 }
 
 export async function requireAdminPage(nextPath = "/admin"): Promise<AuthContext> {
-  const auth = await getAuth();
+  const auth = await getAuth("admin");
   if (!auth || !isAdminRole(auth.user.role)) redirect(`/admin/login?next=${encodeURIComponent(nextPath)}`);
   return auth;
 }
@@ -190,7 +215,7 @@ export async function requireSellerPage(nextPath = "/seller"): Promise<AuthConte
   // On seller.<domain> the portal lives at the root ("/login"); on the main domain it is under "/seller".
   const host = ((await headers()).get("host") ?? "").toLowerCase();
   const p = host.startsWith("seller.") ? "" : "/seller";
-  const auth = await getAuth();
+  const auth = await getAuth("seller");
   if (!auth) redirect(`${p}/login?next=${encodeURIComponent(nextPath)}`);
   const seller = await db.seller.findUnique({ where: { userId: auth.user.id } });
   if (!seller) redirect(`${p}/register`);

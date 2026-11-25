@@ -168,7 +168,7 @@ function OtpFlow({ onDone }: { onDone: (r: SignedIn) => Promise<void> }) {
           <input id="lg-name" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" placeholder="Your full name" maxLength={80} autoFocus />
         </div>
         {error ? <Err text={error} /> : null}
-        <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy}>
+        <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy} aria-busy={busy || undefined}>
           {busy ? <Spin /> : null}Continue <Icon name="arrow" />
         </button>
         <button type="button" className="co-tb cm-skip" onClick={() => signed && onDone(signed)} disabled={busy}>
@@ -234,7 +234,7 @@ function OtpFlow({ onDone }: { onDone: (r: SignedIn) => Promise<void> }) {
           </p>
         ) : null}
         {error ? <Err text={error} /> : null}
-        <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy || code.length !== 6}>
+        <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy || code.length !== 6} aria-busy={busy || undefined}>
           {busy ? <Spin /> : null}Verify &amp; continue
         </button>
         <p className="cm-resend">
@@ -274,7 +274,7 @@ function OtpFlow({ onDone }: { onDone: (r: SignedIn) => Promise<void> }) {
         </div>
       </div>
       {error ? <Err text={error} /> : null}
-      <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy}>
+      <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy} aria-busy={busy || undefined}>
         {busy ? <Spin /> : null}Get OTP <Icon name="arrow" />
       </button>
       <p className="cm-lf-note">
@@ -369,7 +369,7 @@ function EmailFlow({ onDone }: { onDone: (r: SignedIn) => Promise<void> }) {
         </div>
       ) : null}
       {error ? <Err text={error} /> : null}
-      <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy}>
+      <button type="submit" className="btn btn-cart btn-lg cm-lf-cta" disabled={busy} aria-busy={busy || undefined}>
         {busy ? <Spin /> : null}
         {mode === "signin" ? "Sign in" : "Create account"}
       </button>

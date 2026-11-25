@@ -73,7 +73,7 @@ export function CreatePayoutButton({ seller, canEdit, className = "btn btn-dark 
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Creating…" : "Create payout"}
             </button>
           </>
@@ -169,7 +169,7 @@ export function PayoutStatusActions({ payout, canEdit }: { payout: { id: string;
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-ok" disabled={busy}>
+            <button type="submit" className="btn btn-ok" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Saving…" : "Mark paid"}
             </button>
           </>
@@ -254,7 +254,7 @@ export function AdjustmentButton({
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Posting…" : "Post adjustment"}
             </button>
           </>

@@ -17,7 +17,8 @@ export class ApiFailure extends Error {
 type Init = { method?: string; body?: unknown; form?: FormData; signal?: AbortSignal };
 
 export async function api<T = unknown>(path: string, init: Init = {}): Promise<T> {
-  const headers: Record<string, string> = { accept: "application/json" };
+  // x-tbb-scope: use the seller-portal session even on shared endpoints (e.g. /api/v1/ads/book/…)
+  const headers: Record<string, string> = { accept: "application/json", "x-tbb-scope": "seller" };
   let body: BodyInit | undefined;
   if (init.form) body = init.form;
   else if (init.body !== undefined) {

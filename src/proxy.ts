@@ -11,7 +11,10 @@ import { jwtVerify } from "jose";
  *    Pages and API routes still do full checks (session revocation, seller approval) server-side.
  */
 
-const SESSION_COOKIE = "tbb_session";
+// One session cookie per area (keep in sync with COOKIES in src/lib/site.ts) — areas never share a sign-in.
+const STORE_COOKIE = "tbb_session";
+const SELLER_COOKIE = "tbb_seller_session";
+const ADMIN_COOKIE = "tbb_admin_session";
 const PUBLIC_SELLER_PATHS = ["/seller/login", "/seller/register", "/seller/status", "/seller/forgot"];
 const PUBLIC_ADMIN_PATHS = ["/admin/login"];
 
@@ -42,7 +45,7 @@ export async function proxy(req: NextRequest) {
 
   // 1) host routing
   // Store-only pages requested on seller.* (e.g. a "Sell on TBB" link) belong to the main storefront.
-  const STORE_ONLY = /^\/(sell|p|s|c|cart|checkout|brand|brands|deals|gifts|account|advertise|order|credits|about|kit)(\/|$)/;
+  const STORE_ONLY = /^\/(sell|p|s|c|cart|checkout|brand|brands|deals|gifts|account|advertise|order|credits|about|kit|help|contact|shipping|returns|terms|privacy)(\/|$)/;
   if (sub === "seller" && STORE_ONLY.test(pathname)) {
     const rootHost = process.env.ROOT_DOMAIN ?? (req.headers.get("host") ?? "").replace(/^seller\./, "");
     // Raw Location header: NextResponse.redirect would shorten a "same-origin" URL to a relative path,
@@ -59,13 +62,12 @@ export async function proxy(req: NextRequest) {
   }
 
   // 2) auth gate for console areas
-  const token = req.cookies.get(SESSION_COOKIE)?.value;
   const isAdminArea = pathname === "/admin" || pathname.startsWith("/admin/");
   const isSellerArea = pathname === "/seller" || pathname.startsWith("/seller/");
   const isAccountArea = pathname === "/account" || pathname.startsWith("/account/");
 
   if (isAdminArea && !PUBLIC_ADMIN_PATHS.some((p) => pathname.startsWith(p))) {
-    const role = await roleFromToken(token);
+    const role = await roleFromToken(req.cookies.get(ADMIN_COOKIE)?.value);
     if (role !== "ADMIN" && role !== "STAFF") {
       const login = req.nextUrl.clone();
       login.pathname = sub === "admin" ? "/login" : "/admin/login";
@@ -75,7 +77,7 @@ export async function proxy(req: NextRequest) {
   }
 
   if (isSellerArea && !PUBLIC_SELLER_PATHS.some((p) => pathname.startsWith(p))) {
-    const role = await roleFromToken(token);
+    const role = await roleFromToken(req.cookies.get(SELLER_COOKIE)?.value);
     if (!role) {
       const login = req.nextUrl.clone();
       login.pathname = sub === "seller" ? "/login" : "/seller/login";
@@ -84,7 +86,7 @@ export async function proxy(req: NextRequest) {
     }
   }
 
-  if (isAccountArea && !(await roleFromToken(token))) {
+  if (isAccountArea && !(await roleFromToken(req.cookies.get(STORE_COOKIE)?.value))) {
     const login = req.nextUrl.clone();
     login.pathname = "/login";
     login.search = `?next=${encodeURIComponent(url.pathname)}`;

@@ -97,7 +97,7 @@ export function TestGateway({ p }: { p: TestPaymentView }) {
         </p>
       ) : null}
       <div className="pg-acts">
-        <button type="button" className="btn btn-cart btn-lg" onClick={() => submit("success")} disabled={busy !== null || left === 0}>
+        <button type="button" className="btn btn-cart btn-lg" onClick={() => submit("success")} disabled={busy !== null || left === 0} aria-busy={(busy === "success") || undefined}>
           {busy === "success" ? (
             <>
               <span className="co-spin" aria-hidden="true" />
@@ -107,7 +107,7 @@ export function TestGateway({ p }: { p: TestPaymentView }) {
             <>Pay {formatINR(p.amount)}</>
           )}
         </button>
-        <button type="button" className="btn btn-ghost btn-lg pg-fail" onClick={() => submit("failure")} disabled={busy !== null}>
+        <button type="button" className="btn btn-ghost btn-lg pg-fail" onClick={() => submit("failure")} disabled={busy !== null} aria-busy={(busy === "failure") || undefined}>
           {busy === "failure" ? "Declining…" : "Fail payment"}
         </button>
       </div>

@@ -29,8 +29,9 @@ export function LoginForm() {
     try {
       const out = await api<LoginOut>("/api/v1/auth/login", { body: { email: email.trim(), password, scope: "seller" } });
       if (!out.seller) {
-        setError({ msg: "This account doesn't have a seller profile yet.", register: true });
-        setBusy(false);
+        // signed in to the portal with a shopping account → continue to the seller application
+        router.replace(href("/seller/register"));
+        router.refresh();
         return;
       }
       const dest = out.seller.status === "APPROVED" ? safeNext(params.get("next"), "/seller") : "/seller/status";
@@ -69,7 +70,7 @@ export function LoginForm() {
           </button>
         </span>
       </label>
-      <button type="submit" className="btn btn-cart sa-submit" disabled={busy}>
+      <button type="submit" className="btn btn-cart sa-submit" disabled={busy} aria-busy={busy || undefined}>
         {busy ? "Signing in…" : "Sign in to Seller Central"}
       </button>
     </form>

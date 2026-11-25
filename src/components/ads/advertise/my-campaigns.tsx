@@ -171,7 +171,7 @@ export function MyCampaigns() {
                 </div>
                 <div className="avc-a">
                   {unpaid ? (
-                    <button type="button" className="btn btn-cart btn-sm" disabled={busy === c.code} onClick={() => void pay(c)}>
+                    <button type="button" className="btn btn-cart btn-sm" disabled={busy === c.code} aria-busy={(busy === c.code) || undefined} onClick={() => void pay(c)}>
                       {busy === c.code ? "Processing…" : `Pay ${fmt(c.quote?.total ?? c.payment?.amount ?? 0)}`}
                     </button>
                   ) : null}

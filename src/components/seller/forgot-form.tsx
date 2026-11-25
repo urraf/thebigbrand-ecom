@@ -67,7 +67,7 @@ export function ForgotForm() {
           <input type="email" autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@business.in" autoFocus />
           <small>We&apos;ll text a 6-digit code to the mobile number on your seller account.</small>
         </label>
-        <button type="submit" className="btn btn-cart sa-submit" disabled={busy}>
+        <button type="submit" className="btn btn-cart sa-submit" disabled={busy} aria-busy={busy || undefined}>
           {busy ? "Sending…" : "Send reset code"}
         </button>
         <p className="sa-alt">
@@ -110,7 +110,7 @@ export function ForgotForm() {
         </span>
         <small>At least 8 characters, with letters and a number. You&apos;ll be signed out on other devices.</small>
       </label>
-      <button type="submit" className="btn btn-cart sa-submit" disabled={busy}>
+      <button type="submit" className="btn btn-cart sa-submit" disabled={busy} aria-busy={busy || undefined}>
         {busy ? "Updating…" : "Set new password"}
       </button>
       <p className="sa-alt">

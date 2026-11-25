@@ -192,7 +192,7 @@ export function AddressForm({ address, defaultName, defaultPhone, submitLabel = 
               Cancel
             </button>
           ) : null}
-          <button type="submit" className="btn btn-cart btn-lg" disabled={busy}>
+          <button type="submit" className="btn btn-cart btn-lg" disabled={busy} aria-busy={busy || undefined}>
             {busy ? (
               <>
                 <span className="co-spin" aria-hidden="true" />

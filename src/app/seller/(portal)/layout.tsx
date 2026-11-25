@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getAuth } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { NavProgress } from "@/components/ui/nav-progress";
 import { Toaster } from "@/components/ui/toast";
 import { SellerShell, SellerShellLive } from "@/components/seller/shell";
 import { getSellerNavCounts } from "@/server/seller/dashboard";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 
 /** Per-user sidebar data (session + badges) streams in; the frame itself is static. */
 async function ShellData() {
-  const auth = await getAuth();
+  const auth = await getAuth("seller");
   const seller = auth
     ? await db.seller.findUnique({ where: { userId: auth.user.id }, select: { id: true, displayName: true, logoUrl: true, status: true, slug: true, contactName: true } })
     : null;
@@ -26,6 +27,9 @@ async function ShellData() {
 export default function SellerPortalLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="sl">
+      <Suspense fallback={null}>
+        <NavProgress tone="violet" />
+      </Suspense>
       <Suspense fallback={<SellerShell seller={null} counts={null} active={null} />}>
         <ShellData />
       </Suspense>

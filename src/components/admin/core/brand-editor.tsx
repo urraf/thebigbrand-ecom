@@ -302,7 +302,7 @@ export function CategoryEditor({ category, parents, trigger }: { category?: Cate
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Saving…" : "Save category"}
             </button>
           </>

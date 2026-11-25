@@ -557,7 +557,7 @@ export function BookingForm({ slots, brands, availability, aov, today }: { slots
                 </span>
               </div>
               <div className="av-tgw-btns">
-                <button type="button" className="btn btn-cart btn-lg" disabled={busy === "pay"} onClick={() => void verify({ test: true, outcome: "success" })}>
+                <button type="button" className="btn btn-cart btn-lg" disabled={busy === "pay"} aria-busy={(busy === "pay") || undefined} onClick={() => void verify({ test: true, outcome: "success" })}>
                   {busy === "pay" ? "Processing…" : `Pay ${fmt(p.amount)}`}
                   <Icon name="arrow" />
                 </button>
@@ -572,7 +572,7 @@ export function BookingForm({ slots, brands, availability, aov, today }: { slots
             </div>
           ) : (
             <div className="av-ok-btns">
-              <button type="button" className="btn btn-cart btn-lg" disabled={busy === "pay"} onClick={() => void payRazorpay()}>
+              <button type="button" className="btn btn-cart btn-lg" disabled={busy === "pay"} aria-busy={(busy === "pay") || undefined} onClick={() => void payRazorpay()}>
                 <Icon name="card" />
                 {busy === "pay" ? "Opening…" : `Pay ${fmt(p.amount)} securely`}
               </button>
@@ -878,7 +878,7 @@ export function BookingForm({ slots, brands, availability, aov, today }: { slots
               </button>
             </div>
           ) : (
-            <button type="button" className="av-upload" disabled={busy === "upload"} onClick={() => fileRef.current?.click()}>
+            <button type="button" className="av-upload" disabled={busy === "upload"} aria-busy={(busy === "upload") || undefined} onClick={() => fileRef.current?.click()}>
               <Icon name="upload" />
               <span>
                 {busy === "upload" ? (
@@ -1042,7 +1042,7 @@ export function BookingForm({ slots, brands, availability, aov, today }: { slots
             </Link>
           </div>
         ) : null}
-        <button type="submit" className="btn btn-cart btn-lg av-submit" disabled={busy === "submit"}>
+        <button type="submit" className="btn btn-cart btn-lg av-submit" disabled={busy === "submit"} aria-busy={(busy === "submit") || undefined}>
           {busy === "submit" ? "Saving your campaign…" : q ? `Continue to payment · ${fmt(q.total)}` : "Continue to payment"}
           <Icon name="arrow" />
         </button>

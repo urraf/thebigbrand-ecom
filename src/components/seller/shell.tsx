@@ -62,7 +62,7 @@ export function SellerShell({ seller, counts, active }: Props) {
   async function logout() {
     setBusy(true);
     try {
-      await fetch("/api/v1/auth/logout", { method: "POST" });
+      await fetch("/api/v1/auth/logout", { method: "POST", headers: { "x-tbb-scope": "seller" } });
       router.replace(href("/seller/login"));
       router.refresh();
     } catch {
@@ -134,7 +134,7 @@ export function SellerShell({ seller, counts, active }: Props) {
           <a href={href.store("/")} target="_blank" rel="noopener">
             <Icon name="store" /> Visit the store <Icon name="arrow" />
           </a>
-          <button type="button" onClick={logout} disabled={busy}>
+          <button type="button" onClick={logout} disabled={busy} aria-busy={busy || undefined}>
             <Icon name="logout" /> {busy ? "Signing out…" : "Sign out"}
           </button>
         </div>
@@ -185,7 +185,7 @@ export function SellerShell({ seller, counts, active }: Props) {
         <a href={href.store("/")}>
           <Icon name="store" /> Visit the store
         </a>
-        <button type="button" onClick={logout} disabled={busy}>
+        <button type="button" onClick={logout} disabled={busy} aria-busy={busy || undefined}>
           <Icon name="logout" /> {busy ? "Signing out…" : "Sign out"}
         </button>
       </div>

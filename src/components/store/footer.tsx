@@ -41,7 +41,7 @@ export function Footer() {
             <Link href="/about" prefetch={false}>About The Big Brands</Link>
             <Link href="/about#authentic" prefetch={false}>Authenticity promise</Link>
             <Link href="/brands" prefetch={false}>All brand stores</Link>
-            <Link href="/credits" prefetch={false}>Image credits</Link>
+            <Link href="/contact" prefetch={false}>Contact us</Link>
           </nav>
           <nav aria-label="Make money with us">
             <h2>Make money with us</h2>
@@ -56,8 +56,10 @@ export function Footer() {
             <Link href="/account" prefetch={false}>Your account</Link>
             <Link href="/account/orders" prefetch={false}>Track your order</Link>
             <Link href="/cart" prefetch={false}>Your cart</Link>
-            <a href={`mailto:${site.supportEmail}`}>Returns &amp; refunds</a>
-            <a href={`tel:${site.supportPhone.replace(/\s/g, "")}`}>Help centre · {site.supportPhone}</a>
+            <Link href="/shipping" prefetch={false}>Shipping &amp; delivery</Link>
+            <Link href="/returns" prefetch={false}>Returns, refunds &amp; cancellation</Link>
+            <Link href="/help" prefetch={false}>Help centre</Link>
+            <a href={`tel:${site.supportPhone.replace(/\s/g, "")}`}>Call us · {site.supportPhone}</a>
           </nav>
           <div className="ft-app">
             <h2>Shop on the app</h2>
@@ -93,7 +95,8 @@ export function Footer() {
           </span>
           <span className="ft-copy">
             © <CopyrightYear /> The Big Brands · {site.tagline}. 100% authentic products, sourced from brands &amp; authorised
-            distributors. <Link href="/credits" prefetch={false}>Image credits</Link>
+            distributors. <Link href="/terms" prefetch={false}>Terms of use</Link> · <Link href="/privacy" prefetch={false}>Privacy</Link> ·{" "}
+            <Link href="/credits" prefetch={false}>Image credits</Link>
           </span>
         </div>
       </div>

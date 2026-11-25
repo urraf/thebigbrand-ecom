@@ -66,7 +66,7 @@ export function AdvertiserFormButton({
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Saving…" : id ? "Save" : "Add advertiser"}
             </button>
           </>

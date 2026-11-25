@@ -115,7 +115,7 @@ export function CouponEditor({ coupon, brands, trigger }: { coupon?: CouponRow; 
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Saving…" : coupon ? "Save coupon" : "Create coupon"}
             </button>
           </>

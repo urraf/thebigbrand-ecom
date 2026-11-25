@@ -313,7 +313,7 @@ export function ProfileForm({ profile, categories }: Props) {
       <div className="sl-sticky-act">
         <small>{bankDirty ? "Bank details changed — password required" : "Changes apply immediately"}</small>
         <span className="sl-spacer" />
-        <button type="submit" className="btn btn-cart" disabled={saving || uploading}>
+        <button type="submit" className="btn btn-cart" disabled={saving || uploading} aria-busy={saving || undefined}>
           <Icon name="check" /> {saving ? "Saving…" : "Save profile"}
         </button>
       </div>

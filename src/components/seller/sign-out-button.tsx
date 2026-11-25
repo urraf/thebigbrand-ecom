@@ -14,7 +14,7 @@ export function SignOutButton({ className = "btn btn-ghost", label = "Sign out" 
       disabled={busy}
       onClick={async () => {
         setBusy(true);
-        await fetch("/api/v1/auth/logout", { method: "POST" }).catch(() => null);
+        await fetch("/api/v1/auth/logout", { method: "POST", headers: { "x-tbb-scope": "seller" } }).catch(() => null);
         router.replace(href("/seller/login"));
         router.refresh();
       }}

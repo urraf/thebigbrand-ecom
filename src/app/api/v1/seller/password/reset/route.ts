@@ -15,5 +15,5 @@ export const POST = route({ auth: "public" }, async ({ req }) => {
   const body = await parseBody(req, Body);
   rateLimit(`seller-reset:${body.email}`, 10, 15 * 60 * 1000);
   const user = await resetPassword(body.email, body.code, body.password);
-  return signedInResponse(req, user, {});
+  return signedInResponse(req, user, {}, "seller");
 });

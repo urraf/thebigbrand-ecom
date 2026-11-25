@@ -524,11 +524,11 @@ export function ProductEditor({ initial, brands, categories, concerns, commissio
             Cancel
           </button>
           {!live ? (
-            <button type="button" className="btn btn-ghost" disabled={!!saving} onClick={() => save(false)}>
+            <button type="button" className="btn btn-ghost" disabled={!!saving} aria-busy={(saving === "draft") || undefined} onClick={() => save(false)}>
               {saving === "draft" ? "Saving…" : "Save draft"}
             </button>
           ) : null}
-          <button type="submit" className="btn btn-cart" disabled={!!saving}>
+          <button type="submit" className="btn btn-cart" disabled={!!saving} aria-busy={(saving === "submit") || undefined}>
             <Icon name="check" /> {saving === "submit" ? "Saving…" : live ? "Save changes" : "Submit for review"}
           </button>
         </div>

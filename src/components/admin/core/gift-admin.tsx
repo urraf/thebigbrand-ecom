@@ -73,7 +73,7 @@ export function GiftEditor({ gift, products, trigger }: { gift?: GiftRow; produc
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy}>
+            <button type="submit" className="btn btn-dark" disabled={busy} aria-busy={busy || undefined}>
               {busy ? "Saving…" : gift ? "Save gift" : "Add gift"}
             </button>
           </>
@@ -136,7 +136,7 @@ export function RestockButton({ id, name, low }: { id: string; name: string; low
             <button type="button" className="btn btn-ghost" onClick={() => setOpen(false)} disabled={busy}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-dark" disabled={busy || !qty}>
+            <button type="submit" className="btn btn-dark" disabled={busy || !qty} aria-busy={busy || undefined}>
               {busy ? "Saving…" : `Add ${qty ?? 0} minis`}
             </button>
           </>

@@ -7,6 +7,7 @@ import { ConsoleNavFallback, ConsoleNavServer } from "@/components/admin/shell/c
 import { Crumb } from "@/components/admin/shell/crumb";
 import { UserMenuFallback, UserMenuServer } from "@/components/admin/shell/user-menu-server";
 import { Icon } from "@/components/ui/icon";
+import { NavProgress } from "@/components/ui/nav-progress";
 import { Toaster } from "@/components/ui/toast";
 import "@/styles/admin/admin.css";
 import "@/styles/admin/core.css";
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
 export default function ConsoleLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="am">
+      <Suspense fallback={null}>
+        <NavProgress tone="violet" />
+      </Suspense>
       <aside className="am-side">
         <div className="am-side-top">
           <ConsoleLogo />

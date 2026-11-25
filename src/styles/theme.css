@@ -65,6 +65,13 @@ h1, h2, h3, h4 { font-family: var(--f-head); letter-spacing: -.02em; line-height
 .btn-sm { padding: 7px 14px; font-size: 13px; }
 .btn-lg { padding: 13px 26px; font-size: 15px; }
 .btn[disabled] { opacity: .45; pointer-events: none; }
+/* Working buttons (aria-busy): a spinner replaces the icon and the button stays readable while it waits */
+.btn[aria-busy="true"], .btn[disabled][aria-busy="true"] { opacity: .88; cursor: progress; pointer-events: none; }
+.btn[aria-busy="true"]::before { content: ""; flex: none; width: 1.05em; height: 1.05em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: tbb-spin .7s linear infinite; }
+.btn[aria-busy="true"] > .ic { display: none; }
+@keyframes tbb-spin { to { transform: rotate(360deg); } }
+/* inline spinner for non-button spots: <span className="spin" /> */
+.spin { display: inline-block; width: 1em; height: 1em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: tbb-spin .7s linear infinite; vertical-align: -.15em; }
 .ib-sm { width: 32px; height: 32px; display: inline-grid; place-items: center; border-radius: 50%; color: inherit; }
 .ib-sm:hover { background: rgba(127,127,127,.15); }
 .ib-sm .ic { width: 18px; height: 18px; }
@@ -388,3 +395,17 @@ body.chrome-off #hdr, body.chrome-off #ftr, body.chrome-off #tabbar { display: n
 .logo-stack { display: flex; flex-direction: column; line-height: 1; }
 .logo-sub { font: 500 10.5px/1.2 var(--f-ui); letter-spacing: .02em; opacity: .72; margin-top: 3px; white-space: nowrap; }
 @media (max-width: 600px) { .logo-sub { font-size: 9.5px; } }
+
+/* text / menu buttons that are working: leading icon becomes a spinner */
+.co-tb[aria-busy="true"], .am-menu-out[aria-busy="true"], .sl-side-foot button[aria-busy="true"], .sl-menu button[aria-busy="true"] { cursor: progress; }
+.co-tb[aria-busy="true"]::before { content: ""; display: inline-block; width: .9em; height: .9em; margin-right: 6px; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: tbb-spin .7s linear infinite; vertical-align: -.1em; }
+button:not(.btn)[aria-busy="true"] > .ic:first-child { border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: tbb-spin .7s linear infinite; }
+button:not(.btn)[aria-busy="true"] > .ic:first-child > * { display: none; }
+
+/* Top navigation progress bar (NavProgress) */
+.navp { position: fixed; top: 0; left: 0; z-index: 9999; height: 3px; width: 0; opacity: 0; pointer-events: none; border-radius: 0 3px 3px 0; background: linear-gradient(90deg, #ff3d6e, #ff9a3d); box-shadow: 0 0 10px rgba(255,61,110,.6); }
+.navp-violet { background: linear-gradient(90deg, #5b35e0, #ff3d6e); box-shadow: 0 0 10px rgba(91,53,224,.5); }
+.navp[data-state="loading"] { opacity: 1; animation: navp-grow 8s cubic-bezier(.1,.7,.2,1) forwards; }
+.navp[data-state="done"] { animation: navp-done .45s ease-out forwards; }
+@keyframes navp-grow { 0% { width: 0; } 10% { width: 35%; } 40% { width: 65%; } 100% { width: 90%; } }
+@keyframes navp-done { 0% { width: 90%; opacity: 1; } 60% { width: 100%; opacity: 1; } 100% { width: 100%; opacity: 0; } }

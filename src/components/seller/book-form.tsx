@@ -253,7 +253,7 @@ export function BookForm({ products, slots, minStart, defaultEnd, preselect, pre
             The listing is accurate and follows the advertising guidelines
           </label>
           <span className="sl-spacer" />
-          <button type="submit" className="btn btn-cart" disabled={busy}>
+          <button type="submit" className="btn btn-cart" disabled={busy} aria-busy={busy || undefined}>
             <Icon name="megaphone" /> {busy ? "Booking…" : `Book & pay ${formatINR(Math.round(b * (1 + GST)))}`}
           </button>
         </div>

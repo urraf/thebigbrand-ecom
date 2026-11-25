@@ -74,7 +74,8 @@ if (as) {
   if (existsSync(sessFile)) {
     try {
       await context.addCookies(JSON.parse(readFileSync(sessFile, "utf8")));
-      const me = await context.request.get(`${base}/api/v1/auth/me`);
+      const area = acct.scope === "customer" ? "store" : acct.scope;
+      const me = await context.request.get(`${base}/api/v1/auth/me`, { headers: { "x-tbb-scope": area } });
       reused = me.ok() && Boolean((await me.json())?.data?.user);
     } catch { reused = false; }
     if (!reused) await context.clearCookies();

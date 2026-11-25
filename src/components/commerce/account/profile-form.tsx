@@ -107,7 +107,7 @@ export function ProfileForm({ initial }: { initial: Profile }) {
             <Icon name="shield" />
             We never share your details with brands or advertisers.
           </p>
-          <button type="submit" className="btn btn-cart btn-lg" disabled={busy || !dirty}>
+          <button type="submit" className="btn btn-cart btn-lg" disabled={busy || !dirty} aria-busy={busy || undefined}>
             {busy ? "Saving…" : "Save changes"}
           </button>
         </div>

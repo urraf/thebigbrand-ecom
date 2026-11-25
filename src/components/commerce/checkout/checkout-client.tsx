@@ -274,7 +274,7 @@ export function CheckoutClient({ initial, paymentFailed }: { initial: CheckoutSu
 
   const placeLabel = method === "COD" ? `Place order · ${formatINR(totals.total)}` : `Pay ${formatINR(totals.total)}`;
   const placeBtn = (cls = "btn btn-cart btn-lg") => (
-    <button type="button" className={cls} onClick={place} disabled={placing}>
+    <button type="button" className={cls} onClick={place} disabled={placing} aria-busy={placing || undefined}>
       {placing ? (
         <>
           <span className="co-spin" aria-hidden="true" />
@@ -512,7 +512,19 @@ export function CheckoutClient({ initial, paymentFailed }: { initial: CheckoutSu
                 ) : null}
                 <div className="co-sc-foot">
                   <p className="co-foot-note">
-                    By placing your order you agree to our Conditions of Use.{" "}
+                    By placing your order you agree to our{" "}
+                    <Link href="/terms" target="_blank">
+                      Terms of use
+                    </Link>
+                    ,{" "}
+                    <Link href="/privacy" target="_blank">
+                      Privacy policy
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/returns" target="_blank">
+                      Returns policy
+                    </Link>
+                    .{" "}
                     {giftIds.length ? `Your ${plural(giftIds.length, "free gift")} will be packed in the same box.` : ""}
                   </p>
                   {placeBtn()}
@@ -522,6 +534,10 @@ export function CheckoutClient({ initial, paymentFailed }: { initial: CheckoutSu
           </section>
           <p className="co-ck-help">
             Need help? Call <b>{site.supportPhone}</b> (9 am – 9 pm) ·{" "}
+            <Link href="/help" className="link" target="_blank">
+              Help centre
+            </Link>{" "}
+            ·{" "}
             <Link href="/cart" className="link">
               Back to cart
             </Link>

@@ -159,7 +159,7 @@ function ImageField({ label, value, onChange, hint, error }: { label: string; va
         <div style={{ display: "grid", gap: 8 }}>
           <input type="text" value={value} onChange={(e) => onChange(e.target.value)} placeholder="/uploads/… or https://…" aria-label={`${label} URL`} />
           <div className="ag-row">
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => input.current?.click()} disabled={busy}>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={() => input.current?.click()} disabled={busy} aria-busy={busy || undefined}>
               <Icon name="upload" />
               {busy ? "Uploading…" : "Upload"}
             </button>
@@ -682,11 +682,11 @@ export function CampaignEditor({
           <FormError message={formError} />
           {!readOnly ? (
             <div className="ag-ed-bar">
-              <button type="submit" className="btn btn-dark" disabled={Boolean(busy) || (mode === "edit" && !dirty)}>
+              <button type="submit" className="btn btn-dark" disabled={Boolean(busy) || (mode === "edit" && !dirty)} aria-busy={(busy === "save") || undefined}>
                 {busy === "save" ? "Saving…" : mode === "create" ? "Save as draft" : "Save changes"}
               </button>
               {mode === "create" ? (
-                <button type="button" className="btn btn-cart" onClick={() => save(true)} disabled={Boolean(busy)}>
+                <button type="button" className="btn btn-cart" onClick={() => save(true)} disabled={Boolean(busy)} aria-busy={(busy === "approve") || undefined}>
                   <Icon name="check" />
                   {busy === "approve" ? "Approving…" : "Save & approve"}
                 </button>

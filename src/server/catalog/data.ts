@@ -201,7 +201,7 @@ export async function getStoreSettings(): Promise<{ trending: string[]; heroes: 
 export const DEFAULT_TRENDING = ["vitamin c serum", "onion hair oil", "sunscreen spf 50", "salicylic face wash", "beard oil", "perfume for men", "kajal", "body lotion"];
 
 /** Public store details (Setting "store": legal name, address, support contacts) for /about and the footer-level pages. */
-export type StoreInfo = { name: string; legalName: string; address: string; supportEmail: string; supportPhone: string; gstin: string };
+export type StoreInfo = { name: string; legalName: string; address: string; supportEmail: string; supportPhone: string; gstin: string; grievanceName: string; grievanceEmail: string };
 
 export async function getStoreInfo(): Promise<StoreInfo> {
   "use cache";
@@ -217,5 +217,7 @@ export async function getStoreInfo(): Promise<StoreInfo> {
     supportEmail: s(v.supportEmail, "care@thebigbrands.co.in"),
     supportPhone: s(v.supportPhone, "1800 120 4455"),
     gstin: s(v.gstin, ""),
+    grievanceName: s(v.grievanceName, ""),
+    grievanceEmail: s(v.grievanceEmail, ""),
   };
 }

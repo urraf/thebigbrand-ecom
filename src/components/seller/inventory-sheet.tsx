@@ -232,7 +232,7 @@ export function InventorySheet({ rows }: { rows: InvRow[] }) {
         <button type="button" className="btn btn-ghost" disabled={!changes.length || saving} onClick={() => setDraft({})}>
           Discard
         </button>
-        <button type="button" className="btn btn-cart" disabled={!changes.length || saving} onClick={save}>
+        <button type="button" className="btn btn-cart" disabled={!changes.length || saving} aria-busy={saving || undefined} onClick={save}>
           <Icon name="check" /> {saving ? "Saving…" : "Save changes"}
         </button>
       </div>

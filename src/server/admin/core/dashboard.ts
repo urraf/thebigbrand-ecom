@@ -209,6 +209,8 @@ export async function getDashboard(now = new Date()): Promise<DashboardData> {
     attention.push({ key: "campaigns", tone: "coral", icon: "layers", title: `${pending.campaigns} ad campaign${pending.campaigns > 1 ? "s" : ""} awaiting approval`, sub: "Brands are waiting to go live", href: "/admin/campaigns", cta: "Review" });
   if (pending.sellers)
     attention.push({ key: "sellers", tone: "gold", icon: "store", title: `${pending.sellers} seller application${pending.sellers > 1 ? "s" : ""}`, sub: "KYC and bank details to verify", href: "/admin/sellers", cta: "Review" });
+  if (pending.messages)
+    attention.push({ key: "messages", tone: "coral", icon: "info", title: `${pending.messages} customer message${pending.messages > 1 ? "s" : ""} to answer`, sub: "Sent from the Contact page", href: "/admin/messages?status=NEW", cta: "Reply" });
   for (const g of lowGifts)
     attention.push({ key: `gift-${g.id}`, tone: "crit", icon: "gift", title: `${g.miniName} mini is running low`, sub: `${g.stock} left — restock before it disappears from checkout`, href: "/admin/gifts", cta: "Restock" });
   if (outOfStock)

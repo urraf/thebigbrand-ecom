@@ -15,6 +15,6 @@ export const POST = route({ auth: "public" }, async ({ req, auth }) => {
   const input = await parseBody(req, ApplySchema);
   const out = await submitApplication(input, auth);
   const seller = { id: out.seller.id, slug: out.seller.slug, status: out.seller.status, displayName: out.seller.displayName };
-  if (out.isNewUser) return signedInResponse(req, out.user, { seller, isNew: true });
+  if (out.isNewUser) return signedInResponse(req, out.user, { seller, isNew: true }, "seller");
   return NextResponse.json({ data: { seller, resubmitted: out.resubmitted } }, { status: 200 });
 });

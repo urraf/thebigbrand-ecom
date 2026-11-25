@@ -1,0 +1,69 @@
+/* Animated 404 art (LostArt) */
+.lost { position: relative; width: min(460px, 100%); margin: 0 auto; padding: 18px 0 8px; }
+.lost-row { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.lost-d { font-family: var(--f-head); font-weight: 800; font-size: 132px; line-height: 1; letter-spacing: -.04em; background: linear-gradient(160deg, #33195a, #5b35e0 55%, #ff3d6e); -webkit-background-clip: text; background-clip: text; color: transparent; animation: lost-float 3.2s ease-in-out infinite; }
+.lost-d2 { animation-delay: -1.6s; }
+.lost-zero { width: 128px; height: 128px; display: block; animation: lost-spin 7s cubic-bezier(.6,.05,.35,1) infinite; filter: drop-shadow(0 14px 22px rgba(255,61,110,.28)); }
+.lost-zero svg { width: 100%; height: 100%; display: block; }
+.lost-shine { animation: lost-shine 2.6s ease-in-out infinite; }
+.lost-tbb { font: 800 22px var(--f-head); fill: #5b35e0; opacity: .55; letter-spacing: -.02em; }
+
+.lost-props { position: relative; height: 54px; margin-top: -6px; }
+.lost-lip { position: absolute; left: 14%; bottom: 14px; width: 18px; height: 50px; transform-origin: 50% 100%; animation: lost-bob 2.4s ease-in-out infinite; }
+.lip-bullet { position: absolute; left: 3px; top: 0; width: 12px; height: 20px; border-radius: 6px 10px 2px 2px; background: linear-gradient(180deg, #ff5f86, #d6234f); }
+.lip-case { position: absolute; left: 0; bottom: 0; width: 18px; height: 32px; border-radius: 3px; background: linear-gradient(90deg, #22103b, #4a2a7a 45%, #22103b); box-shadow: inset 0 3px 0 #f0b34a; }
+.lost-gift { position: absolute; right: 15%; bottom: 14px; width: 40px; height: 38px; animation: lost-bounce 1.6s cubic-bezier(.3,.6,.4,1) infinite; }
+.gift-box { position: absolute; left: 3px; bottom: 0; width: 34px; height: 26px; border-radius: 4px; background: linear-gradient(90deg, #ff3d6e 0 42%, #ffd166 42% 58%, #ff3d6e 58%); }
+.gift-lid { position: absolute; left: 0; top: 2px; width: 40px; height: 11px; border-radius: 4px; background: linear-gradient(90deg, #ff6a4d 0 42%, #ffd166 42% 58%, #ff6a4d 58%); animation: lost-lid 1.6s cubic-bezier(.3,.6,.4,1) infinite; }
+.gift-lid::before, .gift-lid::after { content: ""; position: absolute; top: -9px; width: 12px; height: 10px; border: 3px solid #ffd166; border-radius: 50% 50% 0 50%; }
+.gift-lid::before { left: 6px; transform: rotate(-20deg); }
+.gift-lid::after { right: 6px; transform: scaleX(-1) rotate(-20deg); }
+.lost-shadow { position: absolute; bottom: 6px; height: 8px; border-radius: 50%; background: rgba(20,10,36,.14); }
+.sh1 { left: calc(14% - 6px); width: 30px; animation: lost-shadow 2.4s ease-in-out infinite; }
+.sh2 { right: calc(15% - 2px); width: 44px; animation: lost-shadow 1.6s cubic-bezier(.3,.6,.4,1) infinite; }
+
+.lost-spark { position: absolute; width: 16px; height: 16px; background: #ffb547; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: lost-twinkle 2.2s ease-in-out infinite; }
+.s1 { top: 4%; left: 12%; }
+.s2 { top: 0; right: 18%; width: 11px; height: 11px; background: #ff3d6e; animation-delay: -.7s; }
+.s3 { top: 46%; right: 4%; width: 13px; height: 13px; background: #5b35e0; animation-delay: -1.3s; }
+.s4 { top: 52%; left: 3%; width: 10px; height: 10px; background: #0b7d57; animation-delay: -1.8s; }
+
+.lost-sm .lost-d { font-size: 88px; }
+.lost-sm .lost-zero { width: 86px; height: 86px; }
+.lost-sm .lost-props { transform: scale(.8); transform-origin: 50% 0; }
+
+@keyframes lost-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes lost-spin { 0%, 18% { transform: rotate(0); } 40% { transform: rotate(-24deg); } 62%, 100% { transform: rotate(360deg); } }
+@keyframes lost-shine { 0%, 30% { transform: translateX(-30px) rotate(25deg); } 70%, 100% { transform: translateX(170px) rotate(25deg); } }
+@keyframes lost-bob { 0%, 100% { transform: rotate(-14deg) translateY(0); } 50% { transform: rotate(10deg) translateY(-6px); } }
+@keyframes lost-bounce { 0%, 100% { transform: translateY(0) scale(1.06, .94); } 15% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px); } 85% { transform: translateY(0) scale(1); } }
+@keyframes lost-lid { 0%, 35%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-6px) rotate(-8deg); } 65% { transform: translateY(0) rotate(0); } }
+@keyframes lost-shadow { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(.65); opacity: .55; } }
+@keyframes lost-twinkle { 0%, 100% { transform: scale(.4) rotate(0); opacity: .25; } 50% { transform: scale(1) rotate(45deg); opacity: 1; } }
+
+@media (max-width: 520px) {
+  .lost-d { font-size: 92px; }
+  .lost-zero { width: 90px; height: 90px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lost *, .lost *::before, .lost *::after { animation: none !important; }
+}
+
+/* not-found page bits (store / root) */
+.nf-card { gap: 14px; overflow: hidden; }
+.nf-card > p { max-width: 560px; color: var(--muted); margin: 0; }
+.nf-search { position: relative; display: flex; gap: 8px; width: min(520px, 100%); }
+.nf-search .ic { position: absolute; left: 16px; top: 50%; width: 18px; height: 18px; margin-top: -9px; color: var(--muted); pointer-events: none; }
+.nf-search input { height: 48px; padding-left: 44px; border-radius: 999px; font-size: 15px; }
+.nf-search .btn { flex: none; height: 48px; }
+.nf-root { min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(circle at 20% 10%, rgba(255,61,110,.12), transparent 40%), radial-gradient(circle at 85% 90%, rgba(91,53,224,.12), transparent 45%), var(--bg); }
+.nf-root-card { width: min(640px, 100%); display: grid; justify-items: center; gap: 14px; text-align: center; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 36px 24px; }
+.nf-root-card h1 { font-family: var(--f-head); font-size: clamp(24px, 3.4vw, 32px); margin: 0; }
+.nf-root-card p { margin: 0; color: var(--muted); max-width: 460px; }
+.nf-logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 18px; color: var(--hdr); }
+.nf-logo i { font-style: normal; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--grad); color: #fff; font-size: 14px; }
+.nf-logo em { font-style: normal; color: var(--coral); }
+.nf-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.am-nf, .sl-nf { gap: 10px; }
+.am-nf .lost, .sl-nf .lost { margin-bottom: 4px; }
+.am-nf-act, .sl-nf-act { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 4px; }

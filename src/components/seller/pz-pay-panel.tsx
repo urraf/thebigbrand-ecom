@@ -54,7 +54,7 @@ export function PayPanel({ code, payment: initial, prefill, onPaid, compact }: P
 
   if (compact) {
     return (
-      <button type="button" className="btn btn-cart btn-sm" onClick={() => pay("success")} disabled={!!busy}>
+      <button type="button" className="btn btn-cart btn-sm" onClick={() => pay("success")} disabled={!!busy} aria-busy={!!busy || undefined}>
         <Icon name="card" /> {busy ? "Opening…" : amount ? `Pay ${formatINR(amount)}` : "Pay now"}
       </button>
     );
@@ -69,11 +69,11 @@ export function PayPanel({ code, payment: initial, prefill, onPaid, compact }: P
       </span>
       <span className="sl-actions">
         {isTest ? (
-          <button type="button" className="btn btn-ghost btn-sm" onClick={() => pay("failure")} disabled={!!busy}>
+          <button type="button" className="btn btn-ghost btn-sm" onClick={() => pay("failure")} disabled={!!busy} aria-busy={(busy === "failure") || undefined}>
             {busy === "failure" ? "…" : "Simulate failure"}
           </button>
         ) : null}
-        <button type="button" className="btn btn-cart btn-sm" onClick={() => pay("success")} disabled={!!busy}>
+        <button type="button" className="btn btn-cart btn-sm" onClick={() => pay("success")} disabled={!!busy} aria-busy={(busy === "success") || undefined}>
           <Icon name="check" /> {busy === "success" ? "Processing…" : isTest ? "Pay with test gateway" : "Pay securely"}
         </button>
       </span>

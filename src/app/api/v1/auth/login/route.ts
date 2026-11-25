@@ -12,7 +12,8 @@ const Body = z.object({
 
 /**
  * POST /api/v1/auth/login — email + password login.
- * scope "admin" requires ADMIN/STAFF; scope "seller" requires a SELLER account (approval is checked by the portal).
+ * scope "admin" requires ADMIN/STAFF; scope "seller" accepts sellers and customers who are applying (approval is checked by the portal).
+ * Each scope gets its own session cookie — signing in to one area never signs you in to another.
  */
 export const POST = route({ auth: "public" }, async ({ req }) => {
   const { email, password, scope } = await parseBody(req, Body);
@@ -24,11 +25,13 @@ export const POST = route({ auth: "public" }, async ({ req }) => {
   if (!user || !ok) throw err.unauthorized("Incorrect email or password");
   if (!user.isActive) throw err.forbidden("This account is disabled");
   if (scope === "admin" && !isAdminRole(user.role)) throw err.forbidden("This account doesn't have admin access");
-  if (scope === "seller" && user.role !== "SELLER" && user.role !== "ADMIN") throw err.forbidden("This isn't a seller account");
+  // Seller portal: sellers, plus customers who want to apply with their existing account (the portal sends
+  // them to /register). Staff use the admin console.
+  if (scope === "seller" && user.role === "STAFF") throw err.forbidden("Staff accounts can't use the seller portal — sign in to the admin console");
 
   let seller: { id: string; status: string; displayName: string } | null = null;
   if (scope === "seller") {
     seller = await db.seller.findUnique({ where: { userId: user.id }, select: { id: true, status: true, displayName: true } });
   }
-  return signedInResponse(req, user, seller ? { seller } : {});
+  return signedInResponse(req, user, seller ? { seller } : {}, scope === "customer" ? "store" : scope);
 });

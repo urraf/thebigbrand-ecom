@@ -37,7 +37,7 @@ export default function SellerRegisterPage() {
 }
 
 async function RegisterBody() {
-  const [auth, categories, brands, href] = await Promise.all([getAuth(), getCategoryOptions(), getBrandOptions(), getSellerHref()]);
+  const [auth, categories, brands, href] = await Promise.all([getAuth("seller"), getCategoryOptions(), getBrandOptions(), getSellerHref()]);
   const opts = { categories: categories.map((c) => ({ slug: c.slug, name: c.name })), brands: brands.map((b) => b.name) };
   if (!auth) return <ApplyWizard mode="new" {...opts} />;
 

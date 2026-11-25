@@ -37,6 +37,7 @@ export const ADMIN_NAV: AdminNavGroup[] = [
       { href: "/admin/brands", label: "Brands & categories", icon: "tag", owner: "admin-core" },
       { href: "/admin/customers", label: "Customers", icon: "user", owner: "admin-core" },
       { href: "/admin/reviews", label: "Reviews", icon: "star", owner: "admin-core" },
+      { href: "/admin/messages", label: "Messages", icon: "info", owner: "admin-core" },
     ],
   },
   {

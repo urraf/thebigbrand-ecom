@@ -21,6 +21,8 @@ export const StoreSettings = z.object({
   supportEmail: z.string().trim().email(),
   supportPhone: z.string().trim().min(6).max(20),
   address: z.string().trim().max(240).default(""),
+  grievanceName: z.string().trim().max(80).default(""),
+  grievanceEmail: z.string().trim().email().or(z.literal("")).default(""),
   invoicePrefix: z.string().trim().max(10).default("TBB"),
 });
 
@@ -47,6 +49,8 @@ const DEFAULT_STORE: StoreSettings = {
   supportEmail: site.supportEmail,
   supportPhone: site.supportPhone,
   address: "",
+  grievanceName: "",
+  grievanceEmail: "",
   invoicePrefix: "TBB",
 };
 const DEFAULT_SHIPPING: ShippingSettings = {

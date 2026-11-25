@@ -678,7 +678,7 @@ export function ApplyWizard({ mode, who, initial, rejectionReason, categories, b
             </span>
           ) : null}
           <span className="sa-spacer" />
-          <button type="submit" className="btn btn-cart" disabled={busy} style={{ minWidth: 160 }}>
+          <button type="submit" className="btn btn-cart" disabled={busy} aria-busy={busy || undefined} style={{ minWidth: 160 }}>
             {cur === "review" ? (busy ? "Submitting…" : mode === "edit" ? "Resubmit application" : "Submit application") : "Continue"}
             {cur !== "review" ? <Icon name="arrow" /> : null}
           </button>

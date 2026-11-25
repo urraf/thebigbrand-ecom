@@ -33,7 +33,7 @@ export function PayNowButton({ number, label = "Complete payment", className = "
     setBusy(false);
   };
   return (
-    <button type="button" className={className} onClick={pay} disabled={busy}>
+    <button type="button" className={className} onClick={pay} disabled={busy} aria-busy={busy || undefined}>
       {busy ? <span className="co-spin" aria-hidden="true" /> : <Icon name="card" />}
       {busy ? "Opening payment…" : label}
     </button>
@@ -86,7 +86,7 @@ export function CancelOrderButton({ number, unpaid, className = "btn btn-ghost" 
         <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpen(false)} disabled={busy}>
           Keep order
         </button>
-        <button type="button" className="btn btn-dark btn-sm" onClick={cancel} disabled={busy}>
+        <button type="button" className="btn btn-dark btn-sm" onClick={cancel} disabled={busy} aria-busy={busy || undefined}>
           {busy ? "Cancelling…" : "Yes, cancel"}
         </button>
       </div>
@@ -180,7 +180,7 @@ export function ReturnRequest({ number, items }: { number: string; items: Pick<O
         <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpen(false)} disabled={busy}>
           Cancel
         </button>
-        <button type="submit" className="btn btn-dark btn-sm" disabled={busy}>
+        <button type="submit" className="btn btn-dark btn-sm" disabled={busy} aria-busy={busy || undefined}>
           {busy ? "Sending…" : "Submit request"}
         </button>
       </div>

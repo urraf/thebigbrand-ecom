@@ -59,12 +59,12 @@ export function OrderActions({ number, placed, confirmed, packed, compact, showD
   return (
     <div className="sl-order-act">
       {placed > 0 ? (
-        <button type="button" className="btn btn-cart btn-sm" onClick={() => run("confirm")} disabled={!!busy}>
+        <button type="button" className="btn btn-cart btn-sm" onClick={() => run("confirm")} disabled={!!busy} aria-busy={(busy === "confirm") || undefined}>
           <Icon name="check" /> {busy === "confirm" ? "Confirming…" : placed > 1 ? `Confirm ${placed} items` : "Confirm order"}
         </button>
       ) : null}
       {confirmed > 0 || (placed > 0 && !compact) ? (
-        <button type="button" className={placed > 0 ? "btn btn-ghost btn-sm" : "btn btn-cart btn-sm"} onClick={() => run("pack")} disabled={!!busy}>
+        <button type="button" className={placed > 0 ? "btn btn-ghost btn-sm" : "btn btn-cart btn-sm"} onClick={() => run("pack")} disabled={!!busy} aria-busy={(busy === "pack") || undefined}>
           <Icon name="box" /> {busy === "pack" ? "Saving…" : placed > 0 ? "Confirm & mark packed" : "Mark packed"}
         </button>
       ) : null}
@@ -134,7 +134,7 @@ export function OrderActions({ number, placed, confirmed, packed, compact, showD
             <button type="button" className="btn btn-ghost" onClick={() => dlg.current?.close()}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-cart" disabled={busy === "ship"}>
+            <button type="submit" className="btn btn-cart" disabled={busy === "ship"} aria-busy={(busy === "ship") || undefined}>
               <Icon name="truck" /> {busy === "ship" ? "Saving…" : "Mark shipped"}
             </button>
           </div>

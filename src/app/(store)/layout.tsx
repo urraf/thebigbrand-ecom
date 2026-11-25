@@ -8,6 +8,7 @@ import { Header } from "@/components/store/header";
 import { MenuDrawer } from "@/components/store/menu-drawer";
 import { StoreHydrator } from "@/components/store/session-slots";
 import { TabBar } from "@/components/store/tab-bar";
+import { NavProgress } from "@/components/ui/nav-progress";
 import { Toaster } from "@/components/ui/toast";
 import "@/styles/store/ui.css";
 import "@/styles/store/store.css";
@@ -20,6 +21,9 @@ import "@/styles/store/store.css";
 export default function StoreLayout({ children }: { children: React.ReactNode }) {
   return (
     <CartProvider>
+      <Suspense fallback={null}>
+        <NavProgress />
+      </Suspense>
       <a className="skip-link" href="#main">
         Skip to content
       </a>

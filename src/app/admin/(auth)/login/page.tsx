@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "Sign in" };
 
 /** Already signed in as ADMIN/STAFF → straight to the console. */
 async function SignedInRedirect() {
-  const auth = await getAuth();
+  const auth = await getAuth("admin");
   if (auth && isAdminRole(auth.user.role)) redirect("/admin");
   return null;
 }

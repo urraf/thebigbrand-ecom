@@ -123,7 +123,7 @@ export function CouponBox({ quote, offers, onChange, compact }: { quote: Quote; 
                   aria-invalid={error ? true : undefined}
                   aria-describedby="cm-cp-err"
                 />
-                <button type="submit" className="btn btn-dark btn-sm" disabled={busy !== null}>
+                <button type="submit" className="btn btn-dark btn-sm" disabled={busy !== null} aria-busy={(busy !== null) || undefined}>
                   {busy && busy !== "remove" && busy === code.trim().toUpperCase() ? "Applying…" : "Apply"}
                 </button>
               </form>
@@ -140,7 +140,7 @@ export function CouponBox({ quote, offers, onChange, compact }: { quote: Quote; 
                         <small>{o.applicable ? `${o.description ? `${o.description} · ` : ""}${o.message}` : o.message}</small>
                       </span>
                       {o.applicable ? (
-                        <button type="button" className="co-tb" onClick={() => apply(o.code)} disabled={busy !== null}>
+                        <button type="button" className="co-tb" onClick={() => apply(o.code)} disabled={busy !== null} aria-busy={(busy === o.code) || undefined}>
                           {busy === o.code ? "…" : "Apply"}
                         </button>
                       ) : null}

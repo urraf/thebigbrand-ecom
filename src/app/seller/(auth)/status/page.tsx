@@ -35,7 +35,7 @@ export default function SellerStatusPage() {
 }
 
 async function StatusBody() {
-  const [auth, href] = await Promise.all([getAuth(), getSellerHref()]);
+  const [auth, href] = await Promise.all([getAuth("seller"), getSellerHref()]);
   if (!auth) redirect(`${href("/seller/login")}?next=${encodeURIComponent(href("/seller/status"))}`);
   const app = await getApplication(auth.user.id);
 

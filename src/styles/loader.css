@@ -1,0 +1,23 @@
+/* Page loader (PageLoader) */
+.pl { display: grid; justify-items: center; gap: 12px; padding: 56px 16px 40px; width: min(var(--wrap, 1280px), 100% - 32px); margin-inline: auto; }
+.pl-mark { position: relative; width: 64px; height: 64px; display: grid; place-items: center; }
+.pl-mark i { font-style: normal; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; background: var(--grad); color: #fff; font: 800 19px var(--f-head); letter-spacing: -.02em; box-shadow: 0 10px 30px rgba(255,61,110,.35); animation: pl-pulse 1.4s ease-in-out infinite; }
+.pl-orbit { position: absolute; inset: -8px; border-radius: 50%; animation: tbb-spin 1.1s linear infinite; }
+.pl-orbit::before { content: ""; position: absolute; top: 0; left: 50%; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #ffd166; box-shadow: 0 0 10px rgba(255,209,102,.9); }
+.pl-label { font-size: 13.5px; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
+.pl-cards { width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; margin-top: 18px; }
+.pl-card { background: var(--card); border-radius: var(--radius); padding: 12px; display: grid; gap: 8px; box-shadow: var(--shadow); }
+.pl-rows { width: min(760px, 100%); display: grid; gap: 10px; margin-top: 18px; }
+.pl-sk { display: block; border-radius: 8px; background: linear-gradient(90deg, #ece9f3 0%, #f7f5fb 40%, #ece9f3 80%); background-size: 220% 100%; animation: pl-shimmer 1.3s ease-in-out infinite; }
+.pl-img { aspect-ratio: 1; border-radius: 10px; }
+.pl-l1 { height: 12px; width: 85%; }
+.pl-l2 { height: 12px; width: 55%; }
+.pl-row { height: 14px; }
+.pl-dark .pl-label { color: rgba(255,255,255,.7); }
+@keyframes pl-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(.9); } }
+@keyframes pl-shimmer { 0% { background-position: 120% 0; } 100% { background-position: -120% 0; } }
+@keyframes tbb-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .pl-mark i, .pl-sk { animation: none; }
+  .pl-orbit { animation-duration: 2.4s; }
+}

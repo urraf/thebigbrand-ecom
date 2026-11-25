@@ -5,7 +5,7 @@ import { Icon } from "@/components/ui/icon";
 import { formatINR } from "@/lib/money";
 import { CheckField, FormError, MoneyField, NumberField, TagsField, TextAreaField, TextField, useAdminAction, useForm } from "@/components/admin/ui";
 
-type Store = { name: string; legalName: string; gstin: string; supportEmail: string; supportPhone: string; address: string; invoicePrefix: string };
+type Store = { name: string; legalName: string; gstin: string; supportEmail: string; supportPhone: string; address: string; grievanceName: string; grievanceEmail: string; invoicePrefix: string };
 type Shipping = { shippingFee: number; freeShippingMin: number; codEnabled: boolean; codFee: number; codMaxOrder: number; partner: string; dispatchDays: number };
 
 function SaveBar({ busy, dirty, saved }: { busy: boolean; dirty: boolean; saved?: boolean }) {
@@ -44,7 +44,11 @@ export function StoreForm({ initial }: { initial: Store }) {
         <TextField label="Support email" type="email" value={v.supportEmail} onChange={(supportEmail) => set({ supportEmail })} />
         <TextField label="Support phone" type="tel" value={v.supportPhone} onChange={(supportPhone) => set({ supportPhone })} maxLength={20} />
       </div>
-      <TextAreaField label="Registered / warehouse address" value={v.address} onChange={(address) => set({ address })} rows={2} maxLength={240} hint="Shown on invoices" />
+      <TextAreaField label="Registered / warehouse address" value={v.address} onChange={(address) => set({ address })} rows={2} maxLength={240} hint="Shown on invoices and on the Contact, Terms and Privacy pages" />
+      <div className="am-fgrid">
+        <TextField label="Grievance officer" value={v.grievanceName} onChange={(grievanceName) => set({ grievanceName })} maxLength={80} hint="Required by the Consumer Protection (E-Commerce) Rules — shown on Contact" />
+        <TextField label="Grievance officer email" type="email" value={v.grievanceEmail} onChange={(grievanceEmail) => set({ grievanceEmail })} hint="Leave empty to use the support email" />
+      </div>
       <SaveBar busy={busy} dirty={dirty} />
     </form>
   );

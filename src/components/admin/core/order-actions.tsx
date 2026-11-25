@@ -201,7 +201,7 @@ export function NoteForm({ number }: { number: string }) {
       }}
     >
       <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add an internal note (customer called, address corrected…)" maxLength={500} aria-label="Internal note" />
-      <button type="submit" className="btn btn-ghost btn-sm" disabled={busy || note.trim().length < 2}>
+      <button type="submit" className="btn btn-ghost btn-sm" disabled={busy || note.trim().length < 2} aria-busy={busy || undefined}>
         {busy ? "Adding…" : "Add note"}
       </button>
     </form>

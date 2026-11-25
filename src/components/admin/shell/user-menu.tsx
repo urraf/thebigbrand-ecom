@@ -36,7 +36,7 @@ export function UserMenu({ name, email, role }: { name: string; email: string | 
   async function logout() {
     setBusy(true);
     try {
-      await fetch("/api/v1/auth/logout", { method: "POST" });
+      await fetch("/api/v1/auth/logout", { method: "POST", headers: { "x-tbb-scope": "admin" } });
     } finally {
       router.replace("/admin/login");
       router.refresh();
@@ -72,7 +72,7 @@ export function UserMenu({ name, email, role }: { name: string; email: string | 
               Store settings
             </Link>
           ) : null}
-          <button type="button" role="menuitem" className="am-menu-out" onClick={logout} disabled={busy}>
+          <button type="button" role="menuitem" className="am-menu-out" onClick={logout} disabled={busy} aria-busy={busy || undefined}>
             <Icon name="logout" />
             {busy ? "Signing out…" : "Log out"}
           </button>

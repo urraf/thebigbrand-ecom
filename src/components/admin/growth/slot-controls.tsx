@@ -84,7 +84,7 @@ export function RateEditor({ code, name, model, rate }: { code: string; name: st
           />
         </span>
         <small>{UNIT[model]?.trim()}</small>
-        <button type="submit" className="ib-sm" aria-label="Save rate" disabled={busy || !(Number(value) > 0)}>
+        <button type="submit" className="ib-sm" aria-label="Save rate" disabled={busy || !(Number(value) > 0)} aria-busy={busy || undefined}>
           <Icon name="check" />
         </button>
         <button type="button" className="ib-sm" aria-label="Cancel" onClick={() => setEditing(false)} disabled={busy}>
@@ -169,7 +169,7 @@ export function SlotSettingsForm({
       </div>
       <FormError message={lastError && !Object.keys(lastError.fields).length ? lastError.message : null} />
       <div className="ag-row">
-        <button type="submit" className="btn btn-dark btn-sm" disabled={busy || !dirty}>
+        <button type="submit" className="btn btn-dark btn-sm" disabled={busy || !dirty} aria-busy={busy || undefined}>
           {busy ? "Saving…" : "Save settings"}
         </button>
         {dirty ? <span className="am-muted" style={{ fontSize: 12.5 }}>Unsaved changes</span> : null}
