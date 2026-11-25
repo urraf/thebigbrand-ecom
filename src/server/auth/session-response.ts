@@ -15,7 +15,7 @@ export async function signedInResponse(
   extra: Record<string, unknown> = {},
   scope: AuthScope = "store",
 ) {
-  const { token, expiresAt } = await createSession(user, { userAgent: req.headers.get("user-agent"), ip: clientIp(req) });
+  const { token, expiresAt } = await createSession(user, { userAgent: req.headers.get("user-agent"), ip: clientIp(req) }, scope);
   const res = NextResponse.json({
     data: { user: { id: user.id, role: user.role, name: user.name, email: user.email, phone: user.phone }, token, expiresAt, scope, ...extra },
   });

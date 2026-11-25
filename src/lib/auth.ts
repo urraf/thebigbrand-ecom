@@ -91,10 +91,11 @@ export async function verifySessionToken(token: string | undefined | null): Prom
 export async function createSession(
   user: { id: string; role: Role },
   meta: { userAgent?: string | null; ip?: string | null } = {},
+  scope: AuthScope = "store",
 ): Promise<{ token: string; expiresAt: Date; sessionId: string }> {
   const expiresAt = new Date(Date.now() + SESSION_MAX_AGE * 1000);
   const session = await db.session.create({
-    data: { userId: user.id, expiresAt, userAgent: meta.userAgent?.slice(0, 300), ip: meta.ip ?? null },
+    data: { userId: user.id, scope, expiresAt, userAgent: meta.userAgent?.slice(0, 300), ip: meta.ip ?? null },
   });
   await db.user.update({ where: { id: user.id }, data: { lastLoginAt: new Date() } });
   const token = await signSessionToken({ sub: user.id, role: user.role, sid: session.id });
@@ -105,19 +106,21 @@ export async function revokeSession(sessionId: string): Promise<void> {
   await db.session.updateMany({ where: { id: sessionId, revokedAt: null }, data: { revokedAt: new Date() } });
 }
 
-/** Validates claims against the DB (session not revoked/expired, user active). */
-async function resolveClaims(claims: SessionClaims | null): Promise<AuthContext | null> {
+/** Validates claims against the DB (session not revoked/expired, user active, and created for this area). */
+async function resolveClaims(claims: SessionClaims | null, scope: AuthScope): Promise<AuthContext | null> {
   if (!claims) return null;
   const session = await db.session.findUnique({
     where: { id: claims.sid },
     select: {
       id: true,
+      scope: true,
       revokedAt: true,
       expiresAt: true,
       user: { select: { id: true, role: true, name: true, email: true, phone: true, isActive: true } },
     },
   });
   if (!session || session.revokedAt || session.expiresAt < new Date()) return null;
+  if (session.scope !== scope) return null; // a seller/admin sign-in never counts on the store (and vice versa)
   if (!session.user.isActive || session.user.id !== claims.sub) return null;
   const { isActive: _active, ...user } = session.user;
   return { user, sessionId: session.id };
@@ -167,7 +170,7 @@ export const getAuth = cache(async (scope: AuthScope = "store"): Promise<AuthCon
     const authz = (await headers()).get("authorization");
     if (authz?.startsWith("Bearer ")) token = authz.slice(7);
   }
-  return resolveClaims(await verifySessionToken(token));
+  return resolveClaims(await verifySessionToken(token), scope);
 });
 
 /** Route Handlers: `Authorization: Bearer`, else the cookie of the request's area (see requestScope). */
@@ -184,7 +187,7 @@ export async function getAuthFromRequest(req: NextRequest | Request, scope: Auth
     const m = raw.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
     token = m ? decodeURIComponent(m[1]) : undefined;
   }
-  return resolveClaims(await verifySessionToken(token));
+  return resolveClaims(await verifySessionToken(token), scope);
 }
 
 export function isAdminRole(role: Role | undefined | null): boolean {

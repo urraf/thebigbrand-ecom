@@ -59,6 +59,9 @@ model Session {
   user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userAgent  String?
   ip         String?
+  /// Area this sign-in belongs to: "store" | "seller" | "admin". A session only works in its own area
+  /// (null = created before areas were separated → not accepted anywhere).
+  scope      String?
   expiresAt  DateTime
   revokedAt  DateTime?
   createdAt  DateTime  @default(now())

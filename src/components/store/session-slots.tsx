@@ -28,12 +28,13 @@ function AccountInner({ hello, label, href }: { hello: string; label: string; hr
   );
 }
 
-/** "Hello, Priya · Account & Orders" (signed in) or "Hello, sign in" → /login. */
+/**
+ * "Hello, Priya · Account & Orders" (signed in to the STORE) or "Hello, sign in" → /login.
+ * Always the shopper account: seller-portal and admin sign-ins are separate and never show up here.
+ */
 export async function AccountLink() {
   const { user } = await getStoreSession();
   if (!user) return <AccountInner hello="Hello, sign in" label="Account & Orders" href="/login" />;
-  if (user.role === "ADMIN" || user.role === "STAFF") return <AccountInner hello={`Hello, ${user.firstName}`} label="Admin console" href="/admin" />;
-  if (user.role === "SELLER") return <AccountInner hello={`Hello, ${user.firstName}`} label="Seller hub" href="/seller" />;
   return <AccountInner hello={`Hello, ${user.firstName}`} label="Account & Orders" href="/account" />;
 }
 export function AccountLinkFallback() {
