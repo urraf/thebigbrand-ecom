@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/site";
 import type { DeliverTo } from "@/server/cart/session";
@@ -62,7 +62,9 @@ export function LocBarText({ initial = null }: { initial?: DeliverTo | null }) {
 /** The deliver-to pincode dialog (native <dialog>: focus trap + Esc for free). Mounted once. */
 export function LocationDialog() {
   const { deliverTo, setPincode, user } = useStore();
-  const pathname = usePathname();
+  // No usePathname(): the dialog lives in the static store chrome, and reading URL data there would block
+  // prerendering on dynamic routes (/order/[number], /p/[slug]…). The return path is read when the link is clicked.
+  const router = useRouter();
   const ref = useRef<HTMLDialogElement>(null);
   const [pin, setPin] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -146,7 +148,16 @@ export function LocationDialog() {
           {!user ? (
             <>
               {" · "}
-              <Link href={`/login?next=${encodeURIComponent(pathname || "/")}`} className="link" prefetch={false} onClick={close}>
+              <Link
+                href="/login"
+                className="link"
+                prefetch={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  close();
+                  router.push(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
+                }}
+              >
                 Sign in
               </Link>{" "}
               to use your saved addresses
