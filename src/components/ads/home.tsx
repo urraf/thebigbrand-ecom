@@ -742,6 +742,30 @@ function BillboardCard({ ad }: { ad: ServedAd }) {
         {ad.subline ? <p>{ad.subline}</p> : null}
         <Cta ad={ad} />
       </div>
+      {ad.imageUrl && ps.length ? (
+        // With a campaign photo the photo is the hero: products appear as small shoppable cards on top of it
+        // (a full-size packshot over a lifestyle photo looked pasted on).
+        <div className={`zn-bb-chips n${ps.length}`}>
+          {ps.map((p) => {
+            const off = discountOf(p);
+            return (
+              <a key={p.id} className="zn-bb-chip" href={trackedHref(ad, `/p/${p.slug}`)} rel="sponsored" aria-label={`${p.brand.name} ${p.name}, ${rupees(p.price)}`}>
+                <span className="zn-bb-chip-art" aria-hidden="true">
+                  <ZnVisual product={p} sizes="56px" />
+                </span>
+                <span className="zn-bb-chip-t">
+                  <b>{shortName(p.name)}</b>
+                  <small>
+                    {rupees(p.price)}
+                    {off > 0 ? <em>{off}% off</em> : null}
+                  </small>
+                </span>
+                <Icon name="arrow" />
+              </a>
+            );
+          })}
+        </div>
+      ) : (
       <div className={`zn-bb-art n${ps.length}`}>
         <span className="zn-halo" aria-hidden="true" />
         {ps.length ? (
@@ -756,6 +780,7 @@ function BillboardCard({ ad }: { ad: ServedAd }) {
           </a>
         ) : null}
       </div>
+      )}
       <span className="zn-bb-tag">
         <ZnTag ad={ad} compact />
       </span>

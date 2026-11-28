@@ -29,7 +29,7 @@ export type CartApi = {
   /** true once the server cart has been loaded/hydrated */
   ready: boolean;
   /** like add() but resolves to whether it succeeded (errors are toasted either way) */
-  addItem: (productId: string, qty?: number) => Promise<boolean>;
+  addItem: (productId: string, qty?: number, opts?: { silent?: boolean }) => Promise<boolean>;
   /** PUT /api/v1/cart/gifts — resolves false (and toasts) when the server rejects the choice */
   setGifts: (giftIds: string[]) => Promise<boolean>;
   /** the last successful add (drives the flyout) */
@@ -228,11 +228,13 @@ export function CartProvider({ children, initial = null }: { children: React.Rea
   );
 
   const addItem = useCallback(
-    async (productId: string, qty = 1) => {
+    // silent: no "Added to cart" flyout (Buy now leaves the page right away — the flyout would sit on top of
+    // the checkout / sign-in page)
+    async (productId: string, qty = 1, opts?: { silent?: boolean }) => {
       setPendingAdds((n) => n + qty);
       const view = await mutate(() => api<CartView>("/api/v1/cart", { method: "POST", body: JSON.stringify({ productId, qty }) }));
       setPendingAdds((n) => n - qty);
-      if (view) {
+      if (view && !opts?.silent) {
         setLastAdded({ productId, qty, at: Date.now() });
         setAddedOpen(true);
       }

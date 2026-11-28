@@ -40,6 +40,7 @@ const giftsFor = (subtotal: number, tiers: GiftTierLite[]) => tiers.reduce((n, t
 function useBuy() {
   const { product, qty } = usePdp();
   const { addItem } = useCart();
+  const { user } = useStore();
   const router = useRouter();
   const [busy, setBusy] = useState<"add" | "buy" | null>(null);
   const soldOut = product.stock <= 0;
@@ -52,8 +53,9 @@ function useBuy() {
   const buy = async () => {
     if (busy || soldOut) return;
     setBusy("buy");
-    const ok = await addItem(product.id, qty);
-    if (ok) router.push("/checkout");
+    const ok = await addItem(product.id, qty, { silent: true });
+    // signed-out shoppers go straight to sign-in (then checkout) instead of bouncing off /checkout
+    if (ok) router.push(user ? "/checkout" : "/login?next=%2Fcheckout");
     else setBusy(null);
   };
   return { add, buy, busy, soldOut };

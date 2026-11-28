@@ -19,8 +19,10 @@ type SignedIn = { user: { id: string; name: string | null; role: string }; isNew
 
 export function LoginClient({ next }: { next: string }) {
   const router = useRouter();
-  const { refresh } = useCart();
+  const { refresh, dismissAdded } = useCart();
   const [tab, setTab] = useState<Tab>("otp");
+  // never show the "Added to cart" flyout on top of the sign-in page
+  useEffect(() => dismissAdded(), [dismissAdded]);
   const dest = safeNext(next);
   const checkout = dest.startsWith("/checkout");
 
